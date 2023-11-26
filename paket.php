@@ -75,7 +75,7 @@
         <div class="row">
           
             <div class="card" style="width: 18rem; height:25rem;">
-                <img src="paket1.jpg" class="card-img-top"style="height:40%"  alt="...">
+                <img src="./src/assets/images/paket1.jpg" class="card-img-top"style="height:40%"  alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Paket 1</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -84,7 +84,7 @@
               </div>
 
               <div class="card" style="width: 18rem; height:25rem;">
-                <img src="paket2.jpg" class="card-img-top"style="height:40%"  alt="...">
+                <img src="./src/assets/images/paket2.jpg" class="card-img-top"style="height:40%"  alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Paket 2</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -93,7 +93,7 @@
               </div>
 
               <div class="card" style="width: 18rem; height:25rem;">
-                <img src="paket3.jpg" class="card-img-top"style="height:40%" alt="...">
+                <img src="./src/assets/images/paket3.jpg" class="card-img-top"style="height:40%" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Paket 3</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -107,7 +107,7 @@
         <div class="row">
           
             <div class="card" style="width: 18rem; height:25rem;">
-                <img src="Untitled.jpg" class="card-img-top"style="height:40%" alt="...">
+                <img src="./src/assets/images/Untitled.jpg" class="card-img-top"style="height:40%" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Paket 1</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -116,7 +116,7 @@
               </div>
 
               <div class="card" style="width: 18rem; height:25rem; ">
-                <img src="paket 2.JPG" class="card-img-top" style="height:40%"alt="...">
+                <img src="./src/assets/images/paket2o.JPG" class="card-img-top" style="height:40%"alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Paket 2</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -125,7 +125,7 @@
               </div>
 
               <div class="card" style="width: 18rem; height:25rem;  ">
-                <img src="paket3.o.jpg" class="card-img-top" style="height:40% " alt="...">
+                <img src="./src/assets/images/paket3oo.jpg" class="card-img-top" style="height:40% " alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Paket 3</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
