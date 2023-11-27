@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tampilan awal</title>
-  <link rel="stylesheet" href="src/style/paket.css">
+  <link rel="stylesheet" href="src/style/global.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,300;1,600&display=swap" rel="stylesheet">
@@ -42,14 +42,14 @@
 </head>
 
 <body>
+  <!-- NAVBAR -->
   <section class="header">
     <nav>
       <div class="wrapper">
         <div class="logo">
-          <a href="">Greenside</a>
+          <a href="">GreenSide</a>
         </div>
         <div class="menu">
-
           <ul>
             <li><a href="" class="tbl-biru">Home</a></li>
             <li><a href="" class="tbl-biru">Paket</a></li>
@@ -58,19 +58,12 @@
             <li><a href="" class="tbl-biru">Kontak</a></li>
           </ul>
         </div>
-
       </div>
-
     </nav>
-
-    <div class="text-box">
-      <h1> Wedding Organizer </h1>
-      <p> <br>
-      </p>
-    </div>
+    <!-- END OF NAVBAR -->
   </section>
 
-  <!--------------course-->
+  <!-- CARD -->
   <section class="home">
     <h1> Indoor</h1>
 
@@ -136,6 +129,9 @@
       </div>
     </div>
   </section>
+  <!-- END OF CARD -->
+
+  <!-- FOOTER -->
   <footer>
     <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
       <div class="row">
@@ -198,6 +194,7 @@
       </div>
     </div>
   </footer>
+  <!-- END OF FOOTER -->
   <br>
 </body>
 
