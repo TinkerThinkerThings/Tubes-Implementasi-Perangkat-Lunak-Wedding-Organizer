@@ -80,6 +80,7 @@ nav ul li a:hover {
 }
 .text-box h1 {
   font-size: 62px;
+  
 }
 .text-box p {
   margin: 10px 0 40px;
@@ -163,4 +164,37 @@ p {
 }
 .wrapper .logo a {
   text-decoration: none;
+}
+.Galerry{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.gal {
+  margin: auto;
+  width:50%;
+  height: 50%;
+  padding: 20px;
+}
+.gam{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.gam h1{
+  padding-bottom: 25px;
+}
+.kontak{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.kontak h1{
+  font-size: 36px;
+}
+.kontak h2{
+  font-size: 20px;
+}
+.map{
+  text-align: center;
 }
