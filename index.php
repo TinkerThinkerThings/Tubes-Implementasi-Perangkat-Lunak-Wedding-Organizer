@@ -1,4 +1,6 @@
 <?php
+session_start();
+include 'koneksi.php';
 
 ?>
 <!DOCTYPE html>
@@ -51,20 +53,34 @@
         </div>
         <div class="menu">
           <ul>
-            <li><a href="" class="tbl-biru">Home</a></li>
-            <li><a href="" class="tbl-biru">Paket</a></li>
-            <li><a href="" class="tbl-biru">Galeri</a></li>
-            <li><a href="" class="tbl-biru">Harga</a></li>
-            <li><a href="" class="tbl-biru">Kontak</a></li>
+            <li><a href="#home" class="tbl-biru">Home</a></li>
+            <li><a href="#paket" class="tbl-biru">Paket</a></li>
+            <li><a href="#galery" class="tbl-biru">Galeri</a></li>
+            <li><a href="#mharga" class="tbl-biru">Harga</a></li>
+            <li><a href="#kontak" class="tbl-biru">Kontak</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- END OF NAVBAR -->
   </section>
+  <section class="home" id="home">
+    <div class="gal">
+      <img src="./src/assets/images/paket1.jpg" class="img-fluid" alt="...">
+    </div>
+    <div>
+      <h1> Wedding Organizer</h1>
+      <h2>Wedding organizer adalah ..................................</h2>
+    </div>
+    <div class="row">
+      <div class="card" style="width: 20rem;">
+        <img src="./src/assets/images/ig.jpg" class="card-img-top" alt="...">
 
-  <!-- CARD -->
-  <section class="home">
+      </div>
+    </div>
+  </section>
+  <!-- Paket -->
+  <section class="paket" id="paket">
     <h1> Indoor</h1>
 
     <div class="row">
@@ -132,10 +148,10 @@
 
   <!-- END OF CARD -->
   <!-- Galerry -->
-  <section class="Galerry">
+  <section class="galery" id="galery">
 
     <div class="gal">
-      <img src="./src/assets/images/paket1.jpg" class="card-img-top" height="20%" alt="...">
+      <img src="./src/assets/images/paket1.jpg" class="img-fluid" alt="...">
     </div>
     <div class="gam">
       <h1> Our Galerry</h1>
@@ -185,9 +201,61 @@
   </section>
 
   <!-- END OF Galery -->
+  <!-- Harga -->
+  <section class="mharga" id="mharga">
+    <div class="harga">
+      <h1> Perkiraan Harga</h1>
+    </div>
+    <div class="harga">
+      <h5>Kendaraan</h5>
+      <div class="$form-floating">
+        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+        <label for="floatingInputDisabled"></label>
+      </div>
+      <h5>Tempat</h5>
+      <div class="$form-floating">
+        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+        <label for="floatingInputDisabled"></label>
+      </div>
+      <h5>Jumlah Orang</h5>
+      <div class="$form-floating">
+        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+        <label for="floatingInputDisabled"></label>
+      </div>
+      <h5>MC</h5>
+      <div class="$form-floating">
+        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+        <label for="floatingInputDisabled"></label>
+      </div>
+      <h5>Hiburan</h5>
+      <div class="$form-floating">
+        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+        <label for="floatingInputDisabled"></label>
+      </div>
+      <h5>Dekorasi</h5>
+      <div class="$form-floating">
+        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+        <label for="floatingInputDisabled"></label>
+      </div>
+      <h5>Makeup</h5>
+      <div class="$form-floating">
+        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+        <label for="floatingInputDisabled"></label>
+      </div>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-secondary" type="button">Submit</button>
+      </div>
+      <h5>Total</h5>
+      <div class="$form-floating">
+        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+        <label for="floatingInputDisabled"></label>
+      </div>
+
+  </section>
+  <!-- End Of Harga -->
   <!-- Kontak -->
-  <section>
-    <div class="kontak">
+  <section class="kontak" id="kontak">
+    <div class="judul">
       <h1>Tentang Kontak Kami</h1>
       <h2>ome quick example text to build on the card title and make up the bulk of the card's content.</h2>
 
