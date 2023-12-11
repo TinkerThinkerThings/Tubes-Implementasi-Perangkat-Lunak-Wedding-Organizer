@@ -3,16 +3,39 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
-.header {
-}
+
 .wrapper {
   width: 15000px;
   margin: auto;
   position: static;
   background-color: black;
 }
+.pelayanan{
+
+  background-color: black;
+  height: auto;
+  margin-top: 100px;
+  padding-bottom: 20px;
+  padding-top: 25px;
+}
+.pelayanan h1{
+  color: rgb(255, 255, 255);
+}
+.pelayanan h4{
+  color: rgb(255, 255, 255);
+  padding-top: 15px;
+  font-size: 18px;
+}
+.cobi{
+  background-color: black;
+}
 .home{
   text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.home h1{
+  font-size: 24px;
 }
 .home h2{
   color: #777;
@@ -20,6 +43,7 @@
 .home .row{
   padding-left: 200px;
   padding-right: 50px;
+  padding-top: 100px;
 }
 .logo a {
   font-size: 50px;
@@ -27,6 +51,7 @@
   font-family: "Courier New", Courier;
   color: rgb(255, 255, 255);
   float: left;
+  padding-left: 25px;
 }
 .menu {
   float: right;

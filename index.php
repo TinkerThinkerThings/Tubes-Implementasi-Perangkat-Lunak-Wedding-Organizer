@@ -37,15 +37,8 @@ include 'koneksi.php';
       }
     }
   </style>
-
-
-  <!-- Custom styles for this template -->
-
-</head>
-
-<body>
   <!-- NAVBAR -->
-  <section class="header">
+  <section class="sticky-top">
     <nav>
       <div class="wrapper">
         <div class="logo">
@@ -62,7 +55,11 @@ include 'koneksi.php';
         </div>
       </div>
     </nav>
-    <!-- END OF NAVBAR -->
+  </section>
+  <!-- END OF NAVBAR -->
+</head>
+
+<body>
   </section>
   <section class="home" id="home">
     <div class="gal">
@@ -73,11 +70,14 @@ include 'koneksi.php';
       <h2>Wedding organizer adalah ..................................</h2>
     </div>
     <div class="row">
-      <div class="card" style="width: 20rem;">
-        <img src="./src/assets/images/ig.jpg" class="card-img-top" alt="...">
-
-      </div>
+      <img src="./src/assets/images/paket1.jpg" class="img-thumbnail" style="width: 400px;" alt="...">
+      <h1 class="col">Ini berisi Testimoni testimoni dari konsumen</h1>
     </div>
+    <div class="pelayanan">
+      <h1>Pelayanan yang diberikan</h1>
+      <h4>ini berisi layanan layanan</h4>
+    </div>
+
   </section>
   <!-- Paket -->
   <section class="paket" id="paket">
@@ -89,7 +89,7 @@ include 'koneksi.php';
         <img src="./src/assets/images/paket1.jpg" class="card-img-top" style="height:40%" alt="...">
         <div class="card-body">
           <h5 class="card-title">Paket 1</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">...</p>
           <a href="#" class="btn btn-primary">Pesan Sekarang</a>
         </div>
       </div>
