@@ -2,6 +2,7 @@
 session_start();
 include 'koneksi.php';
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +49,7 @@ include 'koneksi.php';
                     <ul>
                         <li><a href="home.php" class="tbl-biru">Home</a></li>
                         <li><a href="pakett.php" class="tbl-biru">Paket</a></li>
-                        <li><a href="Gallery.php" class="tbl-biru">Galeri</a></li>
+                        <li><a href="Galerry.php" class="tbl-biru">Galeri</a></li>
                         <li><a href="harga.php" class="tbl-biru">Harga</a></li>
                         <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                     </ul>
@@ -72,7 +73,7 @@ include 'koneksi.php';
                 <div class="card-body">
                     <h5 class="card-title">Paket 1</h5>
                     <p class="card-text">...</p>
-                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                    <a href="harga.php?IdPaket=1" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
 
@@ -81,7 +82,7 @@ include 'koneksi.php';
                 <div class="card-body">
                     <h5 class="card-title">Paket 2</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                    <a href="harga.php?IdPaket=2" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
 

@@ -46,11 +46,11 @@ include 'koneksi.php';
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="#home" class="tbl-biru">Home</a></li>
-                        <li><a href="#paket" class="tbl-biru">Paket</a></li>
-                        <li><a href="#galery" class="tbl-biru">Galeri</a></li>
-                        <li><a href="#mharga" class="tbl-biru">Harga</a></li>
-                        <li><a href="#kontak" class="tbl-biru">Kontak</a></li>
+                        <li><a href="home.php" class="tbl-biru">Home</a></li>
+                        <li><a href="pakett.php" class="tbl-biru">Paket</a></li>
+                        <li><a href="Galerry.php" class="tbl-biru">Galeri</a></li>
+                        <li><a href="harga.php" class="tbl-biru">Harga</a></li>
+                        <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                     </ul>
                 </div>
             </div>

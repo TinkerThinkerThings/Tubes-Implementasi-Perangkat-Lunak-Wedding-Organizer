@@ -1,7 +1,42 @@
 <?php
-session_start();
-include 'koneksi.php';
 
+$koneksi = mysqli_connect('localhost', 'root', '', 'wodb');
+
+if (!$koneksi) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+
+// Fungsi untuk mendapatkan data paket dari tabel
+function getPaketData($koneksi, $IdPaket)
+{
+    $query = "SELECT * FROM tbpaket WHERE IdPaket = $IdPaket";
+    $result = mysqli_query($koneksi, $query);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        return mysqli_fetch_assoc($result);
+    }
+
+    return null;
+}
+
+//membuat format rupiah dengan PHP
+//tutorial www.malasngoding.com
+
+function rupiah($angka)
+{
+
+    $hasil_rupiah = "Rp " . number_format($angka, 2, ',', '.');
+    return $hasil_rupiah;
+}
+
+
+
+$IdPaket = isset($_GET['IdPaket']) ? $_GET['IdPaket'] : 0;
+
+// Ambil data paket dari tabel berdasarkan ID yang dikirim melalui URL
+$paket_data = getPaketData($koneksi, $IdPaket);
+
+mysqli_close($koneksi);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +83,7 @@ include 'koneksi.php';
                     <ul>
                         <li><a href="home.php" class="tbl-biru">Home</a></li>
                         <li><a href="pakett.php" class="tbl-biru">Paket</a></li>
-                        <li><a href="Gallery.php" class="tbl-biru">Galeri</a></li>
+                        <li><a href="Galerry.php" class="tbl-biru">Galeri</a></li>
                         <li><a href="harga.php" class="tbl-biru">Harga</a></li>
                         <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                     </ul>
@@ -69,48 +104,72 @@ include 'koneksi.php';
         <div class="harga">
             <h5>Kendaraan</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+                <input type="email" class="form-control" id="kendaraan" placeholder="" value="<?php echo rupiah($paket_data['kendaraan']); ?>" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>Tempat</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+                <input type="email" class="form-control" id="tempat" placeholder="" value="<?php echo rupiah($paket_data['tempat']); ?>" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>Jumlah Orang</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+                <input type="email" class="form-control" id="jumlah" placeholder="" value="<?php echo rupiah($paket_data['jumlah']); ?>" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>MC</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+                <input type="email" class="form-control" id="mc" placeholder="" value="<?php echo rupiah($paket_data['mc']); ?>" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>Hiburan</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+                <input type="email" class="form-control" id="hiburan" placeholder="" value="<?php echo rupiah($paket_data['hiburan']); ?>" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>Dekorasi</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+                <input type="email" class="form-control" id="dekorasi" placeholder="" value="<?php echo rupiah($paket_data['dekorasi']); ?>" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>Makeup</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+                <input type="email" class="form-control" id="makeup" placeholder="" value="<?php echo rupiah($paket_data['makeup']); ?>" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="button">Submit</button>
+                <button class="btn btn-secondary" type="submit">Submit</button>
             </div>
             <h5>Total</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
+                <input type="email" class="form-control" id="total" placeholder="" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-secondary" type="button">Pembayaran</button>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    // Ambil semua input yang akan dijumlahkan
+                    const inputs = document.querySelectorAll('input[id^="kendaraan"], input[id^="tempat"], input[id^="jumlah"], input[id^="mc"], input[id^="hiburan"], input[id^="dekorasi"], input[id^="makeup"]');
 
+                    // Tambahkan event listener untuk tombol submit
+                    const submitButton = document.querySelector('button[type="submit"]');
+                    submitButton.addEventListener("click", function() {
+                        let total = 0;
+
+                        // Lakukan penjumlahan
+                        inputs.forEach(function(input) {
+                            // Ubah nilai menjadi angka setelah menghapus 'Rp ' dan pemisah ribuan
+                            const nilai = parseFloat(input.value.replace('Rp ', '').replace(/\./g, '').replace(',', '.')) || 0;
+                            total += nilai;
+                        });
+
+                        // Tampilkan hasil penjumlahan di input total
+                        document.getElementById("total").value = "Rp " + total.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                    });
+                });
+            </script>
     </section>
     <!-- End Of Harga -->
 
