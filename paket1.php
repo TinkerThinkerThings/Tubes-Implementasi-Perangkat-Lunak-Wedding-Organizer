@@ -63,22 +63,50 @@ include 'koneksi.php';
 </head>
 
 <body>
+    <section class="header2">
+        <div class="wrapper">
+        </div>
+        <div class="text-box">
+            <h1></h1>
+            <h2></h2>
+        </div>
     </section>
-    <section class="home" id="home">
-        <div class="gal">
-            <img src="./src/assets/images/paket1.jpg" class="img-fluid" alt="...">
+    <div class="wrap">
+        <div class="container">
+            <div class="row align-items-center my-5">
+                <div class="col-lg-3">
+                    <img class="img-thumbnail" src="img/poster3.jpg" alt="">
+                </div>
+                <div class="col-lg-3">
+                    <img class="img-thumbnail" src="img/s2.1.jpg" alt="">
+                </div>
+                <div class="col-lg-3">
+                    <img class="img-thumbnail" src="img/s2.2.jpg" alt="">
+                </div>
+                <div class="col-lg-3">
+                    <img class="img-thumbnail" src="img/s2.3.jpg" alt="">
+                </div>
+            </div>
         </div>
-        <div>
-            <h1> Wedding Organizer</h1>
-            <h2>Wedding organizer adalah ..................................</h2>
-        </div>
-        <div class="row">
-            <img src="./src/assets/images/paket1.jpg" class="img-thumbnail" style="width: 400px;" alt="...">
-            <h1 class="col">Ini berisi Testimoni testimoni dari konsumen</h1>
-        </div>
-        <div class="pelayanan">
-            <h1>Pelayanan yang diberikan</h1>
-            <h4>ini berisi layanan layanan</h4>
+        <div class="container">
+            <div class="row align-items-center my-5">
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-11   ">
+                    <div class="card ">
+                        <h5 class="card-header">Detail Paket</h5>
+                        <div class="card-body text-white bg-dark">
+                            <h5 class="card-title">Paket 1</h5>
+                            <p class="card-text">ssss</p>
+                            <p>ss</p>
+                            <div class="memek">d</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </section>
+    </div>
+</body>
+
+</html>

@@ -50,7 +50,7 @@ include 'koneksi.php';
                         <li><a href="home.php" class="tbl-biru">Home</a></li>
                         <li><a href="pakett.php" class="tbl-biru">Paket</a></li>
                         <li><a href="Galerry.php" class="tbl-biru">Galeri</a></li>
-                        <li><a href="harga.php" class="tbl-biru">Harga</a></li>
+                        <li><a href="harga.php?IdPaket=1" class="tbl-biru">Harga</a></li>
                         <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                     </ul>
                 </div>
@@ -73,7 +73,7 @@ include 'koneksi.php';
                 <div class="card-body">
                     <h5 class="card-title">Paket 1</h5>
                     <p class="card-text">...</p>
-                    <a href="harga.php?IdPaket=1" class="btn btn-primary">Pesan Sekarang</a>
+                    <a href="paket1.php" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
 
