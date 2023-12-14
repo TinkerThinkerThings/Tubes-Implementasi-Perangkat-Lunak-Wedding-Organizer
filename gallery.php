@@ -1,8 +1,3 @@
-<?php
-session_start();
-include 'koneksi.php';
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,8 +42,13 @@ include 'koneksi.php';
                 <div class="menu">
                     <ul>
                         <li><a href="home.php" class="tbl-biru">Home</a></li>
+<<<<<<< HEAD:Galerry.php
                         <li><a href="pakett.php" class="tbl-biru">Paket</a></li>
                         <li><a href="Galerry.php" class="tbl-biru">Galeri</a></li>
+=======
+                        <li><a href="paket.php" class="tbl-biru">Paket</a></li>
+                        <li><a href="gallery.php" class="tbl-biru">Galeri</a></li>
+>>>>>>> fa5bcbcc876417da3d9c4427ae077b578ab5854b:gallery.php
                         <li><a href="harga.php" class="tbl-biru">Harga</a></li>
                         <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                     </ul>
