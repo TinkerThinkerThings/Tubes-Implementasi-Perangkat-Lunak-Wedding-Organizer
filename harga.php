@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 $koneksi = mysqli_connect('localhost', 'root', '', 'wodb');
@@ -39,8 +38,6 @@ $paket_data = getPaketData($koneksi, $IdPaket);
 
 mysqli_close($koneksi);
 ?>
-=======
->>>>>>> fa5bcbcc876417da3d9c4427ae077b578ab5854b
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,13 +82,8 @@ mysqli_close($koneksi);
                 <div class="menu">
                     <ul>
                         <li><a href="home.php" class="tbl-biru">Home</a></li>
-<<<<<<< HEAD
                         <li><a href="pakett.php" class="tbl-biru">Paket</a></li>
                         <li><a href="Galerry.php" class="tbl-biru">Galeri</a></li>
-=======
-                        <li><a href="paket.php" class="tbl-biru">Paket</a></li>
-                        <li><a href="gallery.php" class="tbl-biru">Galeri</a></li>
->>>>>>> fa5bcbcc876417da3d9c4427ae077b578ab5854b
                         <li><a href="harga.php" class="tbl-biru">Harga</a></li>
                         <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                     </ul>

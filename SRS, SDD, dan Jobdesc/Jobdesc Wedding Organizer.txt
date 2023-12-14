@@ -2,19 +2,18 @@ TUBES IPL - WEDDING ORGANIZER
 JOBDESC :
 
 Deriansyah
-1. Menu Paket - (Tampilan)
-2. Menu Harga - (Tampilan)
+1. Menu Paket - 21 November (Tampilan)
 
 Nanda
-1. Halaman Kontak - (Tampilan)
+1. Halaman Kontak - 21 November (Tampilan)
 
 Ridwan
-1. Login Page - (Tampilan)
-2. Registrasi/Create Account - (Tampilan)
+1. Login Page - 21 November (Tampilan)
+2. Registrasi/Create Account - 21 November (Tampilan)
 
 Des
-1. Tampilan Menu Utama - (Tampilan)
-2. Pembayaran - (Tampilan)
+1. Tampilan Menu Utama - 21 November (Tampilan)
+2. Pembayaran - 21 November (Tampilan)
 
 Bareng - bareng :
 1. Database

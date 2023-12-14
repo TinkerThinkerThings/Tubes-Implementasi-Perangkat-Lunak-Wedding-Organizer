@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     <?php
     session_start();
     include 'koneksi.php';
@@ -6,10 +5,6 @@
     ?>
     <!DOCTYPE html>
     <html lang="en">
-=======
-<!DOCTYPE html>
-<html lang="en">
->>>>>>> fa5bcbcc876417da3d9c4427ae077b578ab5854b
 
     <head>
         <meta charset="UTF-8">
@@ -35,7 +30,6 @@
                 -moz-user-select: none;
                 user-select: none;
             }
-<<<<<<< HEAD
 
             @media (min-width: 768px) {
                 .bd-placeholder-img-lg {
@@ -59,25 +53,6 @@
                             <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                         </ul>
                     </div>
-=======
-        }
-    </style>
-    <!-- NAVBAR -->
-    <section class="sticky-top">
-        <nav>
-            <div class="wrapper">
-                <div class="logo">
-                    <a href="">GreenSide</a>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="home.php" class="tbl-biru">Home</a></li>
-                        <li><a href="paket.php" class="tbl-biru">Paket</a></li>
-                        <li><a href="galerry.php" class="tbl-biru">Galeri</a></li>
-                        <li><a href="harga.php" class="tbl-biru">Harga</a></li>
-                        <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
-                    </ul>
->>>>>>> fa5bcbcc876417da3d9c4427ae077b578ab5854b
                 </div>
             </nav>
         </section>
