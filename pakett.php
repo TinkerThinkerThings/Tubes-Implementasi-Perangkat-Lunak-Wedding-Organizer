@@ -50,7 +50,7 @@ include 'koneksi.php';
                         <li><a href="home.php" class="tbl-biru">Home</a></li>
                         <li><a href="pakett.php" class="tbl-biru">Paket</a></li>
                         <li><a href="Galerry.php" class="tbl-biru">Galeri</a></li>
-                        <li><a href="harga.php?IdPaket=1" class="tbl-biru">Harga</a></li>
+                        <li><a href="hargamain.php" class="tbl-biru">Harga</a></li>
                         <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                     </ul>
                 </div>
@@ -72,7 +72,7 @@ include 'koneksi.php';
                 <img src="./src/assets/images/paket1.jpg" class="card-img-top" style="height:40%" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Paket 1</h5>
-                    <p class="card-text">...</p>
+                    <p class="card-text"></p>
                     <a href="paket1.php" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
@@ -81,7 +81,7 @@ include 'koneksi.php';
                 <img src="./src/assets/images/paket2.jpg" class="card-img-top" style="height:40%" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Paket 2</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"></p>
                     <a href="harga.php?IdPaket=2" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
@@ -90,8 +90,8 @@ include 'koneksi.php';
                 <img src="./src/assets/images/paket3.jpg" class="card-img-top" style="height:40%" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Paket 3</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                    <p class="card-text"></p>
+                    <a href="harga.php?IdPaket=3" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
         </div>
@@ -104,8 +104,8 @@ include 'koneksi.php';
                 <img src="./src/assets/images/Untitled.jpg" class="card-img-top" style="height:40%" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Paket 1</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                    <p class="card-text"></p>
+                    <a href="harga.php?IdPaket=4" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
 
@@ -113,8 +113,8 @@ include 'koneksi.php';
                 <img src="./src/assets/images/paket2o.JPG" class="card-img-top" style="height:40%" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Paket 2</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                    <p class="card-text"></p>
+                    <a href="harga.php?IdPaket=5" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
 
@@ -122,8 +122,8 @@ include 'koneksi.php';
                 <img src="./src/assets/images/paket3oo.jpg" class="card-img-top" style="height:40% " alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Paket 3</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                    <p class="card-text"></p>
+                    <a href="harga.php?IdPaket=6" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
         </div>

@@ -1,8 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +46,7 @@ if (!isset($_SESSION['username'])) {
                     <li><a href="home.php" class="tbl-biru">Home</a></li>
                     <li><a href="pakett.php" class="tbl-biru">Paket</a></li>
                     <li><a href="Galerry.php" class="tbl-biru">Galeri</a></li>
-                    <li><a href="harga.php" class="tbl-biru">Harga</a></li>
+                    <li><a href="hargamain.php" class="tbl-biru">Harga</a></li>
                     <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                 </ul>
             </div>
@@ -71,24 +69,11 @@ if (!isset($_SESSION['username'])) {
         <div class="col-md-10 ms-auto">
             <form class="text-bayar" action=""></form>
             <div class="pay">
-                <p class="teks-judul">Alamat Pengiriman</p>
-                <label for="" class="w-100 mb-3">Alamat Lengkap <br>
-                    <input type="text" class="formcontrol">
-                </label>
-                <label for="" class="w-100 mb3">Provinsi <br>
-                    <input type="text" class="formcontrol">
-                </label>
-                <label for="" class="w-100 mb3">Kabupaten/Kota<br>
-                    <input type="text" class="formcontrol">
-                </label>
-                <label for="" class="w-100 mb-3">Kode Pos <br>
-                    <input type="number" class="formcontrol">
-                </label>
 
-                <div class="detail col-md-3 me-5 ms-auto ">
+                <div class="detail col-md-10 me-5 ">
                     <div class="card sticky-top">
                         <div class="card-header bg-white">
-                            <p class="teks-judul">Detail Pembayaran</p>
+                            <p class="teks-judul" style="color: black; font-size:30px;">Detail Pembayaran</p>
                         </div>
                         <div class="card-body">
                             <div class="row mt-2 mb-2">

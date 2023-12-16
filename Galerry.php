@@ -49,7 +49,7 @@ include 'koneksi.php';
                         <li><a href="home.php" class="tbl-biru">Home</a></li>
                         <li><a href="pakett.php" class="tbl-biru">Paket</a></li>
                         <li><a href="Galerry.php" class="tbl-biru">Galeri</a></li>
-                        <li><a href="harga.php" class="tbl-biru">Harga</a></li>
+                        <li><a href="hargamain.php" class="tbl-biru">Harga</a></li>
                         <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                     </ul>
                 </div>
@@ -110,7 +110,7 @@ include 'koneksi.php';
                     </div>
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto" id="btnig">
-                    <button class="btn btn-secondary" type="button">Visit Instagram</button>
+                    <a href="https://www.instagram.com/green_sideofficial" class="btn btn-secondary">Visit Instagram</a>
                 </div>
             </div>
 
