@@ -61,7 +61,7 @@ session_start();
 
 
     <div class="row">
-        <div class="col-12 ms-auto">
+        <div class="col-12 me-5  ms-auto" style="padding-left: 270px; padding-top:50px; padding-bottom: 50px;">
             <h1 class="heading"> Pembayaran </h1>
         </div>
     </div>
@@ -85,16 +85,7 @@ session_start();
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="row mt-2 mb-2">
-                                <div class="col-md">
-                                    <small>Biaya pengiriman</small>
-                                </div>
-                                <div class="col-md">
-                                    IDR 10.000
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="card-body">
                             <div class="row mt-2 mb-2">
                                 <div class="col-md">

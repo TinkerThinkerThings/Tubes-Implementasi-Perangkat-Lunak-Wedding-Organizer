@@ -82,7 +82,7 @@ include 'koneksi.php';
                 <div class="card-body">
                     <h5 class="card-title">Paket 2</h5>
                     <p class="card-text"></p>
-                    <a href="harga.php?IdPaket=2" class="btn btn-primary">Pesan Sekarang</a>
+                    <a href="paket2.php" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
 
@@ -91,7 +91,7 @@ include 'koneksi.php';
                 <div class="card-body">
                     <h5 class="card-title">Paket 3</h5>
                     <p class="card-text"></p>
-                    <a href="harga.php?IdPaket=3" class="btn btn-primary">Pesan Sekarang</a>
+                    <a href="paket3.php" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
         </div>
@@ -105,7 +105,7 @@ include 'koneksi.php';
                 <div class="card-body">
                     <h5 class="card-title">Paket 1</h5>
                     <p class="card-text"></p>
-                    <a href="harga.php?IdPaket=4" class="btn btn-primary">Pesan Sekarang</a>
+                    <a href="paket4.php" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
 
@@ -114,7 +114,7 @@ include 'koneksi.php';
                 <div class="card-body">
                     <h5 class="card-title">Paket 2</h5>
                     <p class="card-text"></p>
-                    <a href="harga.php?IdPaket=5" class="btn btn-primary">Pesan Sekarang</a>
+                    <a href="paket5.php" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
 
@@ -123,7 +123,7 @@ include 'koneksi.php';
                 <div class="card-body">
                     <h5 class="card-title">Paket 3</h5>
                     <p class="card-text"></p>
-                    <a href="harga.php?IdPaket=6" class="btn btn-primary">Pesan Sekarang</a>
+                    <a href="paket6.php" class="btn btn-primary">Pesan Sekarang</a>
                 </div>
             </div>
         </div>
