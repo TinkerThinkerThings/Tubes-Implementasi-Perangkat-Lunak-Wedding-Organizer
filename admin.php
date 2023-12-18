@@ -58,48 +58,6 @@
         <section class="main-order">
           <h1>Pesanan Terbaru</h1>
           <div class="list-order-box">
-            <table class="table-order">
-              <thead>
-                <tr>
-                  <th scope="col">Kode Sewa</th>
-                  <th scope="col">Nama</th>
-                  <th scope="col">Alamat</th>
-                  <th scope="col">Jenis Kelamin</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">No Telephone</th>
-                  <th scope="col">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <th scope="row">Bagas</th>
-                  <th scope="row">Jalan Merauke No.55</th>
-                  <th scope="row">Laki - Laki</th>
-                  <th scope="row">bagasganteng@gmail.com</th>
-                  <th scope="row">088855556677</th>
-                  <th scope="row"></th>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <th scope="row">Cantika</th>
-                  <th scope="row">Jalan Sulawesi No.105</th>
-                  <th scope="row">Perempuan</th>
-                  <th scope="row">akucantika@gmail.com</th>
-                  <th scope="row">088855554433</th>
-                  <th scope="row"></th>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <th scope="row">Layla</th>
-                  <th scope="row">Jalan Cahaya No.225</th>
-                  <th scope="row">Perempuan</th>
-                  <th scope="row">laylay@gmail.com</th>
-                  <th scope="row">088822553311</th>
-                  <th scope="row"></th>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </section>
       </section>

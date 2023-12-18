@@ -28,17 +28,16 @@ nav {
 .logo {
   text-align: center;
   display: flex;
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 5px;
 }
 .logo img {
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 .logo span {
   font-weight: bold;
-  padding-left: 15px;
-  font-size: 18px;
+  font-size: 24px;
 }
 a {
   position: relative;
@@ -60,9 +59,10 @@ nav .fas {
   position: relative;
   top: 12px;
   margin-left: 10px;
+  font-weight: 600;
 }
 a:hover {
-  background: #eee;
+  color: #eee;
 }
 .logout {
   position: absolute;
@@ -105,11 +105,7 @@ a:hover {
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-.list-order-box .table-order {
-  width: 100%;
-  text-align: left;
-  border-collapse: collapse;
-}
+
 .html {
   color: rgb(25, 94, 54);
 }
