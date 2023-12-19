@@ -3,33 +3,62 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
-.header {
-  min-height: 100vh;
-  width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../assets/images/wedding.jpg);
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
+
 .wrapper {
-  width: 1500px;
+  width: 15000px;
   margin: auto;
-  position: relative;
+  position: static;
+  background-color: black;
+}
+.pelayanan{
+
+  background-color: black;
+  height: auto;
+  margin-top: 100px;
+  padding-bottom: 20px;
+  padding-top: 25px;
+}
+.pelayanan h1{
+  color: rgb(255, 255, 255);
+}
+.pelayanan h4{
+  color: rgb(255, 255, 255);
+  padding-top: 15px;
+  font-size: 18px;
 }
 
+.home{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.home h1{
+  font-size: 24px;
+}
+.home h2{
+  color: #777;
+}
+.home .row{
+  padding-left: 200px;
+  padding-right: 50px;
+  padding-top: 100px;
+}
 .logo a {
   font-size: 50px;
   font-weight: 800;
   font-family: "Courier New", Courier;
-  color: black;
+  color: rgb(255, 255, 255);
   float: left;
+  padding-left: 25px;
 }
 .menu {
   float: right;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
+
 /* NAVIGATION */
 nav {
   width: 100%;
@@ -68,24 +97,6 @@ nav ul li a:hover {
   transition: 0.5s;
   font-size: 120%;
 }
-/* txt box */
-.text-box {
-  width: 90%;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.text-box h1 {
-  font-size: 62px;
-}
-.text-box p {
-  margin: 10px 0 40px;
-  font-size: 15px;
-  color: #fff;
-}
 @media (max-width: 700px) {
   .text-box h1 {
     font-size: 20px;
@@ -103,7 +114,7 @@ h1 {
   font-weight: 600;
 }
 p {
-  color: #777;
+  color: #696969;
   font-size: 14px;
   font-weight: 300;
   line-height: 22px;
@@ -122,13 +133,13 @@ p {
   padding: 20px 12px;
   box-sizing: border-box;
 }
-.home {
+.paket {
   width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 50px;
 }
-.home-col {
+.paket-col {
   flex-basis: 32%;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -163,4 +174,61 @@ p {
 }
 .wrapper .logo a {
   text-decoration: none;
+}
+.galery{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.gal {
+  margin: auto;
+  width:50%;
+  height: 50%;
+  padding: 20px;
+}
+.gam{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.gam h1{
+  padding-bottom: 25px;
+}
+.judul{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.judul h1{
+  font-size: 36px;
+}
+.judul h2{
+  font-size: 20px;
+}
+.map{
+  text-align: center;
+}
+
+.harga{
+  padding-left: 25%;
+  padding-right: 25%;
+  
+}
+.harga h1{
+  text-align: center;
+  font-size: 36px;
+  padding-top: 50px;
+}
+#btnig{
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.card p{
+  color:rgb(255, 255, 255);
+
+}
+#carouselExample{
+  width: 50%;
+
+ 
 }
