@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2023 at 07:10 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Waktu pembuatan: 19 Des 2023 pada 20.00
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -36,7 +36,7 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paket`
+-- Struktur dari tabel `paket`
 --
 
 CREATE TABLE `paket` (
@@ -56,7 +56,7 @@ CREATE TABLE `paket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `paket`
+-- Dumping data untuk tabel `paket`
 --
 
 INSERT INTO `paket` (`IdPaket`, `nama_kendaraan`, `jumlah_kendaraan`, `tempat`, `jumlah_pengunjung`, `jumlah_mc`, `nama_hiburan`, `nama_dekorasi`, `nama_makeup`, `namapaket`, `deskripsi`, `harga`, `keterangan`) VALUES
@@ -66,7 +66,7 @@ INSERT INTO `paket` (`IdPaket`, `nama_kendaraan`, `jumlah_kendaraan`, `tempat`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pelanggan`
+-- Struktur dari tabel `pelanggan`
 --
 
 CREATE TABLE `pelanggan` (
@@ -78,14 +78,21 @@ CREATE TABLE `pelanggan` (
   `No_telepon` int(14) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `pelanggan`
+--
+
+INSERT INTO `pelanggan` (`ID_Pelanggan`, `Nama_Pelanggan`, `Alamat`, `Jenis_Kelamin`, `Email`, `No_telepon`) VALUES
+('1', 'Acep', 'Sumedang', 'Laki-laki', 'acep@gmail.com', 34454),
+('2', 'Deri', 'Sumedang', 'Laki-laki', 'acep@gmail.com', 34454);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penyewaan`
+-- Struktur dari tabel `penyewaan`
 --
 
 CREATE TABLE `penyewaan` (
-  `ID_Pelanggan` varchar(5) DEFAULT NULL,
   `Nama_Pelanggan` varchar(30) NOT NULL,
   `ID_Sewa` int(5) NOT NULL,
   `Alamat` varchar(30) NOT NULL,
@@ -94,10 +101,22 @@ CREATE TABLE `penyewaan` (
   `IdPaket` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `penyewaan`
+--
+
+INSERT INTO `penyewaan` (`Nama_Pelanggan`, `ID_Sewa`, `Alamat`, `Pembayaran`, `harga`, `IdPaket`) VALUES
+('Acep', 5, 'fgsdfsdf', 'Tunai', 15000000, 1),
+('Deri', 6, 'Bandung', 'Tunai', 15000000, 1),
+('Deri', 7, 'Bandung', 'Tunai', 15000000, 1),
+('Deri', 8, 'Bandung', 'Tunai', 15000000, 1),
+('Deri', 9, 'Bandung', 'Tunai', 15000000, 1),
+('Deri', 10, 'Bandung', 'Tunai', 15000000, 1);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `registrasi`
+-- Struktur dari tabel `registrasi`
 --
 
 CREATE TABLE `registrasi` (
@@ -115,36 +134,34 @@ CREATE TABLE `registrasi` (
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`ID_Admin`);
 
 --
--- Indexes for table `paket`
+-- Indeks untuk tabel `paket`
 --
 ALTER TABLE `paket`
   ADD PRIMARY KEY (`IdPaket`);
 
 --
--- Indexes for table `pelanggan`
+-- Indeks untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
   ADD PRIMARY KEY (`ID_Pelanggan`),
   ADD UNIQUE KEY `Nama_Pelanggan` (`Nama_Pelanggan`);
 
 --
--- Indexes for table `penyewaan`
+-- Indeks untuk tabel `penyewaan`
 --
 ALTER TABLE `penyewaan`
   ADD PRIMARY KEY (`ID_Sewa`),
-  ADD UNIQUE KEY `ID_Pelanggan_2` (`ID_Pelanggan`),
-  ADD KEY `ID_Pelanggan` (`ID_Pelanggan`),
   ADD KEY `Nama_Pelanggan` (`Nama_Pelanggan`),
   ADD KEY `IdPaket` (`IdPaket`);
 
 --
--- Indexes for table `registrasi`
+-- Indeks untuk tabel `registrasi`
 --
 ALTER TABLE `registrasi`
   ADD PRIMARY KEY (`ID_Registrasi`),
@@ -152,29 +169,28 @@ ALTER TABLE `registrasi`
   ADD KEY `ID_Pelanggan` (`ID_Pelanggan`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `penyewaan`
+-- AUTO_INCREMENT untuk tabel `penyewaan`
 --
 ALTER TABLE `penyewaan`
-  MODIFY `ID_Sewa` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_Sewa` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `penyewaan`
+-- Ketidakleluasaan untuk tabel `penyewaan`
 --
 ALTER TABLE `penyewaan`
-  ADD CONSTRAINT `penyewaan_ibfk_1` FOREIGN KEY (`ID_Pelanggan`) REFERENCES `pelanggan` (`ID_Pelanggan`),
   ADD CONSTRAINT `penyewaan_ibfk_2` FOREIGN KEY (`Nama_Pelanggan`) REFERENCES `pelanggan` (`Nama_Pelanggan`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `penyewaan_ibfk_3` FOREIGN KEY (`IdPaket`) REFERENCES `paket` (`IdPaket`) ON DELETE CASCADE;
 
 --
--- Constraints for table `registrasi`
+-- Ketidakleluasaan untuk tabel `registrasi`
 --
 ALTER TABLE `registrasi`
   ADD CONSTRAINT `registrasi_ibfk_1` FOREIGN KEY (`ID_Pelanggan`) REFERENCES `pelanggan` (`ID_Pelanggan`) ON DELETE CASCADE ON UPDATE CASCADE;
