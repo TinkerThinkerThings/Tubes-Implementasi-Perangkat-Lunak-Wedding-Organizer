@@ -49,7 +49,7 @@ include 'koneksi.php';
                         <li><a href="home.php" class="tbl-biru">Home</a></li>
                         <li><a href="pakett.php" class="tbl-biru">Paket</a></li>
                         <li><a href="Galerry.php" class="tbl-biru">Galeri</a></li>
-                        <li><a href="harga.php" class="tbl-biru">Harga</a></li>
+                        <li><a href="hargamain.php" class="tbl-biru">Harga</a></li>
                         <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                     </ul>
                 </div>

@@ -85,7 +85,7 @@ mysqli_close($koneksi);
                         <li><a href="home.php" class="tbl-biru">Home</a></li>
                         <li><a href="pakett.php" class="tbl-biru">Paket</a></li>
                         <li><a href="Galerry.php" class="tbl-biru">Galeri</a></li>
-                        <li><a href="harga.php" class="tbl-biru">Harga</a></li>
+                        <li><a href="hargamain.php" class="tbl-biru">Harga</a></li>
                         <li><a href="kontak.php" class="tbl-biru">Kontak</a></li>
                     </ul>
                 </div>
@@ -105,41 +105,41 @@ mysqli_close($koneksi);
         <div class="harga">
             <h5>Kendaraan</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="kendaraan" placeholder="" value="<?php echo rupiah($paket_data['kendaraan']); ?>" disabled>
+                <input type="email" class="form-control" id="kendaraan" placeholder="" value="" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>Tempat</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="tempat" placeholder="" value="<?php echo rupiah($paket_data['tempat']); ?>" disabled>
+                <input type="email" class="form-control" id="tempat" placeholder="" value="" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>Jumlah Orang</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="jumlah" placeholder="" value="<?php echo rupiah($paket_data['jumlah']); ?>" disabled>
+                <input type="email" class="form-control" id="jumlah" placeholder="" value="" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>MC</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="mc" placeholder="" value="<?php echo rupiah($paket_data['mc']); ?>" disabled>
+                <input type="email" class="form-control" id="mc" placeholder="" value="" disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>Hiburan</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="hiburan" placeholder="" value="<?php echo rupiah($paket_data['hiburan']); ?>" disabled>
+                <input type="email" class="form-control" id="hiburan" placeholder="" value=" " disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>Dekorasi</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="dekorasi" placeholder="" value="<?php echo rupiah($paket_data['dekorasi']); ?>" disabled>
+                <input type="email" class="form-control" id="dekorasi" placeholder="" value=" " disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <h5>Makeup</h5>
             <div class="$form-floating">
-                <input type="email" class="form-control" id="makeup" placeholder="" value="<?php echo rupiah($paket_data['makeup']); ?>" disabled>
+                <input type="email" class="form-control" id="makeup" placeholder="" value=" " disabled>
                 <label for="floatingInputDisabled"></label>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-secondary" type="submit">Submit</button>
+                <button class="btn btn-secondary" type="submit" disabled>Submit</button>
             </div>
             <h5>Total</h5>
             <div class="$form-floating">
@@ -147,29 +147,17 @@ mysqli_close($koneksi);
                 <label for="floatingInputDisabled"></label>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
-                <a href="pembayaran.php" class="btn btn-secondary">Bayar Sekarang</a>
+                <a href="pakett.php" class="btn btn-secondary">Bayar Sekarang</a>
             </div>
             <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    // Ambil semua input yang akan dijumlahkan
-                    const inputs = document.querySelectorAll('input[id^="kendaraan"], input[id^="tempat"], input[id^="jumlah"], input[id^="mc"], input[id^="hiburan"], input[id^="dekorasi"], input[id^="makeup"]');
+                window.onload = function() {
+                    alert("Pesan Paket Terlebih Dahulu!");
 
-                    // Tambahkan event listener untuk tombol submit
-                    const submitButton = document.querySelector('button[type="submit"]');
-                    submitButton.addEventListener("click", function() {
-                        let total = 0;
-
-                        // Lakukan penjumlahan
-                        inputs.forEach(function(input) {
-                            // Ubah nilai menjadi angka setelah menghapus 'Rp ' dan pemisah ribuan
-                            const nilai = parseFloat(input.value.replace('Rp ', '').replace(/\./g, '').replace(',', '.')) || 0;
-                            total += nilai;
-                        });
-
-                        // Tampilkan hasil penjumlahan di input total
-                        document.getElementById("total").value = "Rp " + total.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-                    });
-                });
+                    var confirmation = confirm;
+                    if (confirmation) {
+                        window.location.href = "pakett.php"; // Redirects to a different page
+                    }
+                }
             </script>
     </section>
     <!-- End Of Harga -->

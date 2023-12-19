@@ -127,7 +127,7 @@ include 'koneksi.php';
             </div>
         </div>
         <div class="d-grid gap-2 col-6 mx-auto" style="padding-bottom: 100px;">
-            <a href="harga.php?IdPaket=1" class="btn btn-primary">Pesan Sekarang</a>
+            <a href="harga.php?IdPaket=4" class="btn btn-primary">Pesan Sekarang</a>
         </div>
         </div>
     </section>

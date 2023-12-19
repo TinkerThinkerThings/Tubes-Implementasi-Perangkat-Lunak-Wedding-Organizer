@@ -117,7 +117,7 @@ include 'koneksi.php';
                     <div class="card ">
                         <h5 class="card-header">Detail Paket</h5>
                         <div class="card-body text-white bg-dark">
-                            <h5 class="card-title">Paket 1</h5>
+                            <h5 class="card-title">Paket 3</h5>
                             <p class="card-text">ssss</p>
 
 
@@ -127,7 +127,7 @@ include 'koneksi.php';
             </div>
         </div>
         <div class="d-grid gap-2 col-6 mx-auto" style="padding-bottom: 100px;">
-            <a href="harga.php?IdPaket=1" class="btn btn-primary">Pesan Sekarang</a>
+            <a href="harga.php?IdPaket=3" class="btn btn-primary">Pesan Sekarang</a>
         </div>
         </div>
     </section>
