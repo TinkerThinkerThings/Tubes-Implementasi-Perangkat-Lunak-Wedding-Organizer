@@ -1,340 +1,315 @@
 <?php
-session_start();
-include 'koneksi.php';
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP
+ *
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
+ * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+ * @license	https://opensource.org/licenses/MIT	MIT License
+ * @link	https://codeigniter.com
+ * @since	Version 1.0.0
+ * @filesource
+ */
 
-?>
-<!DOCTYPE html>
-<html lang="en">
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ */
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tampilan awal</title>
-  <link rel="stylesheet" href="src/style/global.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,300;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
+switch (ENVIRONMENT)
+{
+	case 'development':
+		error_reporting(-1);
+		ini_set('display_errors', 1);
+	break;
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/footers/">
+	case 'testing':
+	case 'production':
+		ini_set('display_errors', 0);
+		if (version_compare(PHP_VERSION, '5.3', '>='))
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
+		}
+		else
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
+		}
+	break;
 
-  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+	default:
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'The application environment is not set correctly.';
+		exit(1); // EXIT_ERROR
+}
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
+/*
+ *---------------------------------------------------------------
+ * SYSTEM DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" directory.
+ * Set the path if it is not in the same directory as this file.
+ */
+	$system_path = 'system';
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-  <!-- NAVBAR -->
-  <section class="sticky-top">
-    <nav>
-      <div class="wrapper">
-        <div class="logo">
-          <a href="">GreenSide</a>
-        </div>
-        <div class="menu">
-          <ul>
-            <li><a href="#home" class="tbl-biru">Home</a></li>
-            <li><a href="#paket" class="tbl-biru">Paket</a></li>
-            <li><a href="#galery" class="tbl-biru">Galeri</a></li>
-            <li><a href="#mharga" class="tbl-biru">Harga</a></li>
-            <li><a href="#kontak" class="tbl-biru">Kontak</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </section>
-  <!-- END OF NAVBAR -->
-</head>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * directory than the default one you can set its name here. The directory
+ * can also be renamed or relocated anywhere on your server. If you do,
+ * use an absolute (full) server path.
+ * For more info please see the user guide:
+ *
+ * https://codeigniter.com/userguide3/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ */
+	$application_folder = 'application';
 
-<body>
-  </section>
-  <section class="home" id="home">
-    <div class="gal">
-      <img src="./src/assets/images/paket1.jpg" class="img-fluid" alt="...">
-    </div>
-    <div>
-      <h1> Wedding Organizer</h1>
-      <h2>Wedding organizer adalah ..................................</h2>
-    </div>
-    <div class="row">
-      <img src="./src/assets/images/paket1.jpg" class="img-thumbnail" style="width: 400px;" alt="...">
-      <h1 class="col">Ini berisi Testimoni testimoni dari konsumen</h1>
-    </div>
-    <div class="pelayanan">
-      <h1>Pelayanan yang diberikan</h1>
-      <h4>ini berisi layanan layanan</h4>
-    </div>
+/*
+ *---------------------------------------------------------------
+ * VIEW DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want to move the view directory out of the application
+ * directory, set the path to it here. The directory can be renamed
+ * and relocated anywhere on your server. If blank, it will default
+ * to the standard location inside your application directory.
+ * If you do move this, use an absolute (full) server path.
+ *
+ * NO TRAILING SLASH!
+ */
+	$view_folder = '';
 
-  </section>
-  <!-- Paket -->
-  <section class="paket" id="paket">
-    <h1> Indoor</h1>
 
-    <div class="row">
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here. For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT: If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller. Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ */
+	// The directory name, relative to the "controllers" directory.  Leave blank
+	// if your controller is not in a sub-directory within the "controllers" one
+	// $routing['directory'] = '';
 
-      <div class="card" style="width: 18rem; height:25rem;">
-        <img src="./src/assets/images/paket1.jpg" class="card-img-top" style="height:40%" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Paket 1</h5>
-          <p class="card-text">...</p>
-          <a href="#" class="btn btn-primary">Pesan Sekarang</a>
-        </div>
-      </div>
+	// The controller class file name.  Example:  mycontroller
+	// $routing['controller'] = '';
 
-      <div class="card" style="width: 18rem; height:25rem;">
-        <img src="./src/assets/images/paket2.jpg" class="card-img-top" style="height:40%" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Paket 2</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Pesan Sekarang</a>
-        </div>
-      </div>
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
 
-      <div class="card" style="width: 18rem; height:25rem;">
-        <img src="./src/assets/images/paket3.jpg" class="card-img-top" style="height:40%" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Paket 3</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Pesan Sekarang</a>
-        </div>
-      </div>
-    </div>
-    <br>
-    <h1> Outdoor</h1>
 
-    <div class="row">
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
-      <div class="card" style="width: 18rem; height:25rem;">
-        <img src="./src/assets/images/Untitled.jpg" class="card-img-top" style="height:40%" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Paket 1</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Pesan Sekarang</a>
-        </div>
-      </div>
 
-      <div class="card" style="width: 18rem; height:25rem; ">
-        <img src="./src/assets/images/paket2o.JPG" class="card-img-top" style="height:40%" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Paket 2</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Pesan Sekarang</a>
-        </div>
-      </div>
 
-      <div class="card" style="width: 18rem; height:25rem;  ">
-        <img src="./src/assets/images/paket3oo.jpg" class="card-img-top" style="height:40% " alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Paket 3</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Pesan Sekarang</a>
-        </div>
-      </div>
-    </div>
-  </section>
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
 
-  <!-- END OF CARD -->
-  <!-- Galerry -->
-  <section class="galery" id="galery">
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
 
-    <div class="gal">
-      <img src="./src/assets/images/paket1.jpg" class="img-fluid" alt="...">
-    </div>
-    <div class="gam">
-      <h1> Our Galerry</h1>
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
 
-      <div class="row">
+	if (($_temp = realpath($system_path)) !== FALSE)
+	{
+		$system_path = $_temp.DIRECTORY_SEPARATOR;
+	}
+	else
+	{
+		// Ensure there's a trailing slash
+		$system_path = strtr(
+			rtrim($system_path, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		).DIRECTORY_SEPARATOR;
+	}
 
-        <div class="card" style="width: 18rem;">
-          <img src="./src/assets/images/ig.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row" style="padding-top: 25px;">
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		exit(3); // EXIT_CONFIG
+	}
 
-  <!-- END OF Galery -->
-  <!-- Harga -->
-  <section class="mharga" id="mharga">
-    <div class="harga">
-      <h1> Perkiraan Harga</h1>
-    </div>
-    <div class="harga">
-      <h5>Kendaraan</h5>
-      <div class="$form-floating">
-        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
-        <label for="floatingInputDisabled"></label>
-      </div>
-      <h5>Tempat</h5>
-      <div class="$form-floating">
-        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
-        <label for="floatingInputDisabled"></label>
-      </div>
-      <h5>Jumlah Orang</h5>
-      <div class="$form-floating">
-        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
-        <label for="floatingInputDisabled"></label>
-      </div>
-      <h5>MC</h5>
-      <div class="$form-floating">
-        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
-        <label for="floatingInputDisabled"></label>
-      </div>
-      <h5>Hiburan</h5>
-      <div class="$form-floating">
-        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
-        <label for="floatingInputDisabled"></label>
-      </div>
-      <h5>Dekorasi</h5>
-      <div class="$form-floating">
-        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
-        <label for="floatingInputDisabled"></label>
-      </div>
-      <h5>Makeup</h5>
-      <div class="$form-floating">
-        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
-        <label for="floatingInputDisabled"></label>
-      </div>
-      <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-secondary" type="button">Submit</button>
-      </div>
-      <h5>Total</h5>
-      <div class="$form-floating">
-        <input type="email" class="form-control" id="floatingInputDisabled" placeholder="" disabled>
-        <label for="floatingInputDisabled"></label>
-      </div>
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
-  </section>
-  <!-- End Of Harga -->
-  <!-- Kontak -->
-  <section class="kontak" id="kontak">
-    <div class="judul">
-      <h1>Tentang Kontak Kami</h1>
-      <h2>ome quick example text to build on the card title and make up the bulk of the card's content.</h2>
+	// Path to the system directory
+	define('BASEPATH', $system_path);
 
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1400.4306762980164!2d107.55364192299055!3d-6.888673138792319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e4352d6c5179%3A0x5ede9739cc91de1c!2sGg.%20Masabakti%206%2C%20Cigugur%20Tengah%2C%20Kec.%20Cimahi%20Tengah%2C%20Kota%20Cimahi%2C%20Jawa%20Barat%2040522!5e0!3m2!1sid!2sid!4v1701693539502!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="kontak">
-      <div class="row">
-        <img src="./src/assets/images/" class="card-img-top" height="20%" alt="...">
-      </div>
-    </div>
-  </section>
-  <!-- End Of Kontak -->
-  <!-- FOOTER -->
-  <footer>
-    <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
-      <div class="row">
-        <div class="col-lg-3 mb-3">
-          <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Bootstrap">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img">
-              <title>Bootstrap</title>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path>
-            </svg>
-            <span class="fs-5">Bootstrap</span>
-          </a>
-          <ul class="list-unstyled small">
-            <li class="mb-2">Designed and built with all the love in the world by the <a href="/docs/5.3/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</li>
-            <li class="mb-2">Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-            <li class="mb-2">Currently v5.3.2.</li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-          <h5>Links</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="/">Home</a></li>
-            <li class="mb-2"><a href="/docs/5.3/">Docs</a></li>
-            <li class="mb-2"><a href="/docs/5.3/examples/">Examples</a></li>
-            <li class="mb-2"><a href="https://icons.getbootstrap.com/">Icons</a></li>
-            <li class="mb-2"><a href="https://themes.getbootstrap.com/">Themes</a></li>
-            <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
-            <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank" rel="noopener">Swag Store</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Guides</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="/docs/5.3/getting-started/">Getting started</a></li>
-            <li class="mb-2"><a href="/docs/5.3/examples/starter-template/">Starter template</a></li>
-            <li class="mb-2"><a href="/docs/5.3/getting-started/webpack/">Webpack</a></li>
-            <li class="mb-2"><a href="/docs/5.3/getting-started/parcel/">Parcel</a></li>
-            <li class="mb-2"><a href="/docs/5.3/getting-started/vite/">Vite</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Projects</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">Bootstrap 5</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank" rel="noopener">Bootstrap 4</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">Icons</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">RFS</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener">Examples repo</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Community</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener">Issues</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener">Discussions</a></li>
-            <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">Corporate sponsors</a></li>
-            <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">Open Collective</a></li>
-            <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- END OF FOOTER -->
-  <br>
-</body>
+	// Path to the front controller (this file) directory
+	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 
-</html>
+	// Name of the "system" directory
+	define('SYSDIR', basename(BASEPATH));
+
+	// The path to the "application" directory
+	if (is_dir($application_folder))
+	{
+		if (($_temp = realpath($application_folder)) !== FALSE)
+		{
+			$application_folder = $_temp;
+		}
+		else
+		{
+			$application_folder = strtr(
+				rtrim($application_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
+	{
+		$application_folder = BASEPATH.strtr(
+			trim($application_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
+
+	// The path to the "views" directory
+	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.'views';
+	}
+	elseif (is_dir($view_folder))
+	{
+		if (($_temp = realpath($view_folder)) !== FALSE)
+		{
+			$view_folder = $_temp;
+		}
+		else
+		{
+			$view_folder = strtr(
+				rtrim($view_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.strtr(
+			trim($view_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ */
+require_once BASEPATH.'core/CodeIgniter.php';

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2023 at 02:40 PM
+-- Generation Time: Dec 19, 2023 at 07:10 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -36,6 +36,36 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `paket`
+--
+
+CREATE TABLE `paket` (
+  `IdPaket` int(5) NOT NULL,
+  `nama_kendaraan` varchar(50) NOT NULL,
+  `jumlah_kendaraan` int(5) NOT NULL,
+  `tempat` varchar(50) NOT NULL,
+  `jumlah_pengunjung` int(5) NOT NULL,
+  `jumlah_mc` int(5) NOT NULL,
+  `nama_hiburan` varchar(50) NOT NULL,
+  `nama_dekorasi` varchar(50) NOT NULL,
+  `nama_makeup` varchar(50) NOT NULL,
+  `namapaket` varchar(50) NOT NULL,
+  `deskripsi` varchar(50) NOT NULL,
+  `harga` int(50) NOT NULL,
+  `keterangan` enum('indoor','outdoor') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `paket`
+--
+
+INSERT INTO `paket` (`IdPaket`, `nama_kendaraan`, `jumlah_kendaraan`, `tempat`, `jumlah_pengunjung`, `jumlah_mc`, `nama_hiburan`, `nama_dekorasi`, `nama_makeup`, `namapaket`, `deskripsi`, `harga`, `keterangan`) VALUES
+(1, 'Limosin', 1, 'Lembang', 500, 2, 'Ustad Adi Hidayat', 'Creative Wedding', 'Wardah', 'Paket 1', 'panjangggggggggggggggggggggggggggggggggggggggggggg', 15000000, 'indoor'),
+(2, 'Ankot', 1, 'Alun Alun CImahi', 20, 1, 'Badut', 'Decorative Desain', 'Wardah', 'Paket 2', 'panjangggggggggggggggggggggggggggggggggggggggggggg', 500000, 'outdoor');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pelanggan`
 --
 
@@ -55,13 +85,13 @@ CREATE TABLE `pelanggan` (
 --
 
 CREATE TABLE `penyewaan` (
-  `ID_Pelanggan` varchar(5) NOT NULL,
+  `ID_Pelanggan` varchar(5) DEFAULT NULL,
   `Nama_Pelanggan` varchar(30) NOT NULL,
-  `ID_Sewa` varchar(5) NOT NULL,
+  `ID_Sewa` int(5) NOT NULL,
   `Alamat` varchar(30) NOT NULL,
   `Pembayaran` varchar(30) NOT NULL,
-  `Harga_Sewa` int(20) NOT NULL,
-  `ID_Admin` varchar(5) NOT NULL
+  `harga` int(50) NOT NULL,
+  `IdPaket` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -91,6 +121,12 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`ID_Admin`);
 
 --
+-- Indexes for table `paket`
+--
+ALTER TABLE `paket`
+  ADD PRIMARY KEY (`IdPaket`);
+
+--
 -- Indexes for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
@@ -103,9 +139,9 @@ ALTER TABLE `pelanggan`
 ALTER TABLE `penyewaan`
   ADD PRIMARY KEY (`ID_Sewa`),
   ADD UNIQUE KEY `ID_Pelanggan_2` (`ID_Pelanggan`),
-  ADD KEY `ID_Admin` (`ID_Admin`),
   ADD KEY `ID_Pelanggan` (`ID_Pelanggan`),
-  ADD KEY `Nama_Pelanggan` (`Nama_Pelanggan`);
+  ADD KEY `Nama_Pelanggan` (`Nama_Pelanggan`),
+  ADD KEY `IdPaket` (`IdPaket`);
 
 --
 -- Indexes for table `registrasi`
@@ -114,6 +150,16 @@ ALTER TABLE `registrasi`
   ADD PRIMARY KEY (`ID_Registrasi`),
   ADD KEY `Nama_Pelanggan` (`Nama_Pelanggan`),
   ADD KEY `ID_Pelanggan` (`ID_Pelanggan`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `penyewaan`
+--
+ALTER TABLE `penyewaan`
+  MODIFY `ID_Sewa` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
@@ -125,7 +171,7 @@ ALTER TABLE `registrasi`
 ALTER TABLE `penyewaan`
   ADD CONSTRAINT `penyewaan_ibfk_1` FOREIGN KEY (`ID_Pelanggan`) REFERENCES `pelanggan` (`ID_Pelanggan`),
   ADD CONSTRAINT `penyewaan_ibfk_2` FOREIGN KEY (`Nama_Pelanggan`) REFERENCES `pelanggan` (`Nama_Pelanggan`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `penyewaan_ibfk_3` FOREIGN KEY (`ID_Admin`) REFERENCES `admin` (`ID_Admin`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `penyewaan_ibfk_3` FOREIGN KEY (`IdPaket`) REFERENCES `paket` (`IdPaket`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `registrasi`
