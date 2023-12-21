@@ -12,12 +12,17 @@ class Sewa extends CI_Controller
 
     public function index($IdPaket)
     {
-
+        if ($this->session->userdata('Role') !== 'Admin' && $this->session->userdata('Role') !== 'Owner' && $this->session->userdata('Role') !== 'Pelanggan') {
+            redirect(base_url('index.php/Verifikasidata/login'));
+        }
         $data['item'] = $this->Paket_model->getDetailPaket($IdPaket);
         $this->load->view('Sewa.php', $data);
     }
     public function tambahsewa($IdPaket)
     {
+        if ($this->session->userdata('Role') !== 'Admin' && $this->session->userdata('Role') !== 'Owner' && $this->session->userdata('Role') !== 'Pelanggan') {
+            redirect(base_url('index.php/Verifikasidata/login'));
+        }
         if ($this->input->post('submit')) {
             $data = array(
                 'Nama_Pelanggan' => $this->input->post('Nama_Pelanggan'),
@@ -30,7 +35,7 @@ class Sewa extends CI_Controller
             // Memanggil method tambahsewa dari model untuk menyimpan data ke database
             if ($this->Paket_model->tambahsewa($data)) {
                 // Jika berhasil disimpan, redirect ke halaman tertentu
-                redirect(base_url('index.php/Home   '));
+                redirect(base_url('index.php/Home/Konfirmasi'));
             } else {
                 // Handle error jika penyimpanan gagal
             }

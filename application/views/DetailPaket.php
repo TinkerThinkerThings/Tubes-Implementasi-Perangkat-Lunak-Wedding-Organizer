@@ -45,6 +45,7 @@
                         <li><a href="<?php echo base_url('index.php/Paket') ?>" class="tbl-biru">Paket</a></li>
                         <li><a href="<?php echo base_url('index.php/Home/Gallery') ?>" class="tbl-biru">Galeri</a></li>
                         <li><a href="<?php echo base_url('index.php/Home/Kontak') ?>" class="tbl-biru">Kontak</a></li>
+                        <li><a href="<?php echo base_url('index.php/Verifikasidata/logout') ?>" class="tbl-biru">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -72,13 +73,13 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="2000">
-                        <img src="./src/assets/images/paket1.jpg" class="d-block w-100" alt="...">
+                        <img src="<?php echo $item->gambar; ?>" class="d-block w-100" style="height: 500px; alt=" ...">
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="./src/assets/images/paket1.jpg" class="d-block w-100" alt="...">
+                        <img src="<?php echo $item->gambar2; ?>" class="d-block w-100" style="height: 500px; alt=" ...">
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="./src/assets/images/paket2.jpg" class="d-block w-100" alt="...">
+                        <img src="<?php echo $item->gambar3; ?>" class="d-block w-100" style="height:500px;" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

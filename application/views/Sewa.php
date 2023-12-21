@@ -33,6 +33,24 @@
         }
     </style>
     <!-- NAVBAR -->
+    <section class="sticky-top">
+        <nav>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="">GreenSide</a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="<?php echo base_url('index.php/Home') ?>" class="tbl-biru">Home</a></li>
+                        <li><a href="<?php echo base_url('index.php/Paket') ?>" class="tbl-biru">Paket</a></li>
+                        <li><a href="<?php echo base_url('index.php/Home/Gallery') ?>" class="tbl-biru">Galeri</a></li>
+                        <li><a href="<?php echo base_url('index.php/Home/Kontak') ?>" class="tbl-biru">Kontak</a></li>
+                        <li><a href="<?php echo base_url('index.php/Verifikasidata/logout') ?>" class="tbl-biru">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
     <section class="mharga" id="mharga">
         <?php echo form_open(base_url('index.php/Sewa/tambahsewa/' . $item->IdPaket)); ?>
 

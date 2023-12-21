@@ -45,6 +45,7 @@
                         <li><a href="<?php echo base_url('index.php/Paket') ?>" class="tbl-biru">Paket</a></li>
                         <li><a href="<?php echo base_url('index.php/Home/Gallery') ?>" class="tbl-biru">Galeri</a></li>
                         <li><a href="<?php echo base_url('index.php/Home/Kontak') ?>" class="tbl-biru">Kontak</a></li>
+                        <li><a href="<?php echo base_url('index.php/Verifikasidata/logout') ?>" class="tbl-biru">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -62,7 +63,7 @@
             <?php foreach ($indoorPaket as $item) { ?>
                 <div class="card" style="width: 18rem; height:25rem;">
                     <!-- Menampilkan gambar (sesuaikan dengan field yang sesuai) -->
-                    <img src="<?php echo base_url('asset/photo/paket1.jpg') ?>" class="card-img-top" style="height:40%" alt="...">
+                    <img src="<?php echo $item->gambar; ?>" class="card-img-top" style="height:40%" alt="...">
 
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $item->namapaket; ?></h5>
@@ -81,7 +82,7 @@
             <?php foreach ($outdoorPaket as $item) { ?>
                 <div class="card" style="width: 18rem; height:25rem;">
                     <!-- Menampilkan gambar (sesuaikan dengan field yang sesuai) -->
-                    <img src="<?php echo base_url('asset/photo/paket1.jpg') ?>" class="card-img-top" style="height:40%" alt="...">
+                    <img src="<?php echo $item->gambar; ?>" class="card-img-top" style="height:40%" alt="...">
 
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $item->namapaket; ?></h5>

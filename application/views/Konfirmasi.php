@@ -45,6 +45,7 @@
                         <li><a href="<?php echo base_url('index.php/Paket') ?>" class="tbl-biru">Paket</a></li>
                         <li><a href="<?php echo base_url('index.php/Home/Gallery') ?>" class="tbl-biru">Galeri</a></li>
                         <li><a href="<?php echo base_url('index.php/Home/Kontak') ?>" class="tbl-biru">Kontak</a></li>
+                        <li><a href="<?php echo base_url('index.php/Verifikasidata/logout') ?>" class="tbl-biru">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,15 +56,17 @@
 
 <body>
     </section>
-    <section class="konfirmasi" id="konfirmasi">
+    <section class="home" id="home">
         <div class="gal">
             <img src="<?php echo base_url('asset/photo/paket1.jpg') ?>" class="img-fluid" alt="...">
         </div>
         <div>
-            <h1> Wedding Organizer</h1>
-            <h3>Wedding organizer adalah ..................................</h3>
+            <h1> Pembayaran telah berhasi </h1>
+            <h2>Terima Kadih Telah Menyewa Wedding Organizer Kami</h2>
         </div>
-
+        <div class="d-grid gap-2 mt-5 col-6 mx-auto">
+            <a href="<?php echo base_url('index.php/Paket/') ?>" class="btn btn-primary">Pesan Sekarang</a>
+        </div>
 
     </section>
 
