@@ -55,24 +55,19 @@
 
 <body>
     </section>
-    <section class="home" id="home">
+    <section class="konfirmasi" id="konfirmasi">
         <div class="gal">
             <img src="<?php echo base_url('asset/photo/paket1.jpg') ?>" class="img-fluid" alt="...">
         </div>
         <div>
             <h1> Wedding Organizer</h1>
-            <h2>Wedding organizer adalah ..................................</h2>
-        </div>
-        <div class="row">
-            <img src="<?php echo base_url('asset/photo/paket1.jpg') ?>" class="img-thumbnail" style="width: 400px;" alt="...">
-            <h1 class="col">Ini berisi Testimoni testimoni dari konsumen</h1>
-        </div>
-        <div class="pelayanan">
-            <h1>Pelayanan yang diberikan</h1>
-            <h4>ini berisi layanan layanan</h4>
+            <h3>Wedding organizer adalah ..................................</h3>
         </div>
 
+
     </section>
+
+
 </body>
 <footer>
 

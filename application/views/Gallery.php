@@ -58,7 +58,7 @@
     <section class="galery" id="galery">
 
         <div class="gal">
-            <img src="./src/assets/images/paket1.jpg" class="img-fluid" alt="...">
+            <img src="<?php echo base_url('asset/photo/paket1.jpg') ?>" class="img-fluid" alt="...">
         </div>
         <div class="gam">
             <h1> Our Galerry</h1>
@@ -66,13 +66,13 @@
             <div class="row">
 
                 <div class="card" style="width: 18rem;">
-                    <img src="./src/assets/images/gb5.jpg" class="card-img-top" alt="...">
+                    <img src="<?php echo base_url('asset/photo/paket2o.jpg') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text"></p>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="./src/assets/images/gb2.jpg" class="card-img-top" alt="...">
+                    <img src="<?php echo base_url('asset/photo/paket1.jpg') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text"></p>
                     </div>

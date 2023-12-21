@@ -23,4 +23,8 @@ class Home extends CI_Controller
     {
         $this->load->view('Harga.php');
     }
+    public function Konfirmasi()
+    {
+        $this->load->view('Konfirmasi.php');
+    }
 }
