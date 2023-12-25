@@ -33,15 +33,27 @@
   padding-bottom: 50px;
 }
 .home h1{
+  font-size: 36px;
+  padding-top: 20px;
+}
+.home .row h1{
   font-size: 24px;
+  padding-right: 150px;
 }
 .home h2{
   color: #777;
   font-size: 20px;
+  text-align: justify;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 20px;
 }
 .home .row{
   padding-left: 200px;
   padding-right: 50px;
+  padding-top: 20px;
+}
+.testi{
   padding-top: 100px;
 }
 .logo a {
@@ -125,6 +137,7 @@ p {
   margin-top: 5%;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 100px;
 }
 .course-col {
   flex-basis: 31%;
@@ -232,4 +245,104 @@ p {
   width: 50%;
 
  
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.offering {
+  background: #000;
+  margin-top: 20px;
+}
+
+.offering2 {
+  background: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
+.offering2 h3 {
+  color: rgb(255, 255, 255);
+}
+
+.tabel {
+  color: #fff;
+}
+
+.tabel .cols-3 {
+  width: 33%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  float: left;
+}
+.tabel .cols-3 h4 {
+  margin: 10px 0;
+}
+
+.offering p {
+  color: #aaaaaa;
+  text-align: center;
+  word-spacing: 2px;
+  line-height: 25px;
+}
+
+.tabel2 {
+  color: #fff;
+}
+
+.tabel2 .cols-2 {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  float: left;
+}
+
+.tabel2 .cols-2 h4 {
+  margin: 10px 0;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+.floatt {
+  margin: 0px 0px 80px 0px;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #a81351;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 101;
+}
+
+.my-floatt {
+  margin-top: 16px;
 }

@@ -59,7 +59,7 @@
     <section class="galery" id="galery">
 
         <div class="gal">
-            <img src="<?php echo base_url('asset/photo/paket1.jpg') ?>" class="img-fluid" alt="...">
+            <img src="<?php echo base_url('asset/photo/galery.jpg') ?>" class="img-fluid" alt="...">
         </div>
         <div class="gam">
             <h1> Our Galerry</h1>
@@ -67,19 +67,19 @@
             <div class="row">
 
                 <div class="card" style="width: 18rem;">
-                    <img src="<?php echo base_url('asset/photo/paket2o.jpg') ?>" class="card-img-top" alt="...">
+                    <img src="<?php echo base_url('asset/photo/1.jpeg') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text"></p>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="<?php echo base_url('asset/photo/paket1.jpg') ?>" class="card-img-top" alt="...">
+                    <img src="<?php echo base_url('asset/photo/2.jpeg') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text"></p>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="./src/assets/images/gb3.jpg" class="card-img-top" alt="...">
+                    <img src="<?php echo base_url('asset/photo/3.jpeg') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text"></p>
                     </div>
@@ -87,26 +87,24 @@
             </div>
             <div class="row" style="padding-top: 25px;">
                 <div class="card" style="width: 18rem;">
-                    <img src="./src/assets/images/gb6.jpg" class="card-img-top" alt="...">
+                    <img src="<?php echo base_url('asset/photo/4.jpeg') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text"></p>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="./src/assets/images/gb7.jpg" class="card-img-top" alt="...">
+                    <img src="<?php echo base_url('asset/photo/5.jpeg') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text"></p>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="./src/assets/images/gb8.jpg" class="card-img-top" alt="...">
+                    <img src="<?php echo base_url('asset/photo/7.jpeg') ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text"></p>
                     </div>
                 </div>
-                <div class="d-grid gap-2 col-6 mx-auto" id="btnig">
-                    <a href="https://www.instagram.com/green_sideofficial" class="btn btn-secondary">Visit Instagram</a>
-                </div>
+
             </div>
 
         </div>
