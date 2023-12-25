@@ -122,9 +122,13 @@
         </section>
 
     </section>
+<<<<<<< HEAD
     <div class="footer">
         <p>Copyright &copy; 2023 | GreenSide Wedding Organizer</p>
     </div>
+=======
+>>>>>>> c20c9d7f0ef2ba17ff7b5d4fecb3aeac89e31774
 </body>
+<footer>
 
-</html>
+</footer>

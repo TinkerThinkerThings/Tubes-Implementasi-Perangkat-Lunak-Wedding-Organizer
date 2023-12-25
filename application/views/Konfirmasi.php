@@ -56,16 +56,16 @@
 
 <body>
     </section>
-    <section class="home" id="home">
+    <section class="kon" id="kon">
         <div class="gal">
             <img src="<?php echo base_url('asset/photo/paket1.jpg') ?>" class="img-fluid" alt="...">
         </div>
         <div>
-            <h1> Pembayaran telah berhasi </h1>
-            <h2>Terima Kadih Telah Menyewa Wedding Organizer Kami</h2>
+            <h1> Pembayaran telah berhasil </h1>
+            <h2>Terima Kasih Telah Menyewa Wedding Organizer Kami</h2>
         </div>
         <div class="d-grid gap-2 mt-5 col-6 mx-auto">
-            <a href="<?php echo base_url('index.php/Paket/') ?>" class="btn btn-primary">Pesan Sekarang</a>
+            <a href="<?php echo base_url('index.php/Paket/') ?>" class="btn btn-primary">Pesan Kembali</a>
         </div>
 
     </section>
