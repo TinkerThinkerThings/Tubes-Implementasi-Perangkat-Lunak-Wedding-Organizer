@@ -43,16 +43,12 @@
       <!-- CLOSE-NAV-SIDE-BAR -->
 
       <section class="main">
-        <div class="main-top">
-          <h1>Dashboard</h1>
-          <!-- <i class="fas fa-user-cog"></i> -->
-        </div>
-        <div class="main-dashboard">
+        <div class="main-order">
 
         </div>
 
         <section class="main-order">
-          <h1>Pesanan Terbaru</h1>
+          <h1>History Pembayaran</h1>
           <div class="list-order-box">
           </div>
         </section>

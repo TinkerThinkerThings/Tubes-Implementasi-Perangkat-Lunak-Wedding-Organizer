@@ -52,7 +52,7 @@
                     <div class="list-dashboard-box">
                         <table>
                             <tr class="judul">
-                                <td colspan="7">
+                                <td colspan="8">
                                     <h1>Pesanan Terbaru</h1>
                                 </td>
                             </tr>
@@ -64,6 +64,7 @@
                                 <th>Pembayaran</th>
                                 <th>Harga</th>
                                 <th>Status</th>
+                                <th>Aksi</th>
                             </tr>
 
                             <?php foreach ($dataPenyewaan as $row) : ?>
@@ -76,15 +77,15 @@
                                     <td><?php echo $row->harga ?></td>
                                     <td><?php echo $row->status ?></td>>
                                     <td>
-                                        <button onclick="terimaPesanan(<?php echo $row->ID_Sewa ?>)">Terima</button>
-                                        <button onclick="tolakPesanan(<?php echo $row->ID_Sewa ?>)">Tolak</button>
-
+                                        <button class="terima" onclick="terimaPesanan(<?php echo $row->ID_Sewa ?>)">Terima</button>
+                                        <button class="tolak" onclick="tolakPesanan(<?php echo $row->ID_Sewa ?>)">Tolak</button>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                         </table>
                     </div>
                 </div>
+                <!-- JAVASCRIPT-ACTION -->
                 <script>
                     function terimaPesanan(idSewa) {
                         if (confirm('Anda yakin ingin menerima pesanan ini?')) {

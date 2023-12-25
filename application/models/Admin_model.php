@@ -20,15 +20,19 @@ class Admin_model extends CI_Model
   }
   public function terimaPesanan($idSewa)
   {
-    // Lakukan pembaruan status pesanan menjadi 'Diterima' berdasarkan ID_Sewa yang diterima
     $this->db->where('ID_Sewa', $idSewa);
     $this->db->update('penyewaan', ['status' => 'diterima']);
   }
 
   public function tolakPesanan($idSewa)
   {
-    // Lakukan pembaruan status pesanan menjadi 'Ditolak' berdasarkan ID_Sewa yang diterima
     $this->db->where('ID_Sewa', $idSewa);
     $this->db->update('penyewaan', ['status' => 'ditolak']);
+  }
+
+  public function getPaketById($idPaket)
+  {
+    $this->db->where('IdPaket', $idPaket);
+    return $this->db->get('paket')->row();
   }
 }

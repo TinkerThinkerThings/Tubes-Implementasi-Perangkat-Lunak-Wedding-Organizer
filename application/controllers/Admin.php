@@ -23,29 +23,31 @@ class Admin extends CI_Controller
     }
     $this->load->view('admin/Admin.php');
   }
+
   public function terimaPesanan($idSewa)
   {
-    // Panggil fungsi model untuk memperbarui status pesanan menjadi 'Diterima'
     $this->Admin_model->terimaPesanan($idSewa);
-
-    // Redirect ke halaman sebelumnya atau ke halaman lain jika perlu
     redirect(base_url('index.php/Admin/index'));
   }
 
   public function tolakPesanan($idSewa)
   {
-    // Panggil fungsi model untuk memperbarui status pesanan menjadi 'Ditolak'
     $this->Admin_model->tolakPesanan($idSewa);
-
-    // Redirect ke halaman sebelumnya atau ke halaman lain jika perlu
     redirect(base_url('index.php/Admin/index'));
   }
+
   public function Paket()
   {
     if ($this->session->userdata('Role') !== 'Admin' && $this->session->userdata('Role') !== 'Owner' && $this->session->userdata('Role') !== 'Pelanggan') {
       redirect(base_url('index.php/Verifikasidata/login'));
     }
     $this->load->view('admin/Paket.php');
+  }
+
+  public function getPaketData($idPaket)
+  {
+    $data['dataPaket'] = $this->Admin_model->getDataPaketById($idPaket);
+    $this->load->view('admin/ListPaket.php', $data);
   }
 
   public function Pembayaran()
