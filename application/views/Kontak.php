@@ -68,11 +68,6 @@
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1400.4306762980164!2d107.55364192299055!3d-6.888673138792319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e4352d6c5179%3A0x5ede9739cc91de1c!2sGg.%20Masabakti%206%2C%20Cigugur%20Tengah%2C%20Kec.%20Cimahi%20Tengah%2C%20Kota%20Cimahi%2C%20Jawa%20Barat%2040522!5e0!3m2!1sid!2sid!4v1701693539502!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="kontak">
-            <div class="row">
-                <img src="" class="card-img-top" height="20%" alt="">
-            </div>
-        </div>
 
         <div class="isi">
 

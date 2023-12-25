@@ -34,7 +34,7 @@
                             <i class="fas fa-wallet"></i>
                             <span class="nav-item">Pembayaran</span>
                         </a></li>
-                    <li><a href="" class="logout">
+                    <li><a href="<?php echo base_url('index.php/Verifikasidata/logout') ?>" class="logout">
                             <i class="fas fa-sign-out-alt"></i>
                             <span class="nav-item">Keluar</span>
                         </a></li>
@@ -45,8 +45,8 @@
             <!-- OPEN-MAIN-SECTION -->
             <section class="main">
                 <div class="main-top">
-                    <h1>Dashboard</h1>
-                    <i class="fas fa-user-cog"></i>
+                    <h1>Selamat Datang Admin !</h1>
+                    <!-- <i class="fas fa-user-cog"></i> -->
                 </div>
                 <div class="main-dashboard">
                     <div class="list-dashboard-box">
@@ -111,6 +111,7 @@
                     </div>
                 </section>
             </section>
+            <!-- CLOSE-MAIN-SECTION -->
         </div>
     </body>
 

@@ -43,18 +43,33 @@
       </nav>
       <!-- CLOSE-NAV-SIDE-BAR -->
 
+      <!-- OPEN-MAIN-ORDER -->
       <section class="main">
-        <div class="main-top">
-          <h1>Dashboard</h1>
-          <i class="fas fa-user-cog"></i>
-        </div>
-        <div class="main-dashboard">
-
-        </div>
-
         <section class="main-order">
-          <h1>Pesanan Terbaru</h1>
+          <h1>Daftar Paket</h1>
           <div class="list-order-box">
+            <h5 class="pilih-paket">Pilih Paket : </h5>
+            <div class="form-group">
+              <label for="paket1">
+                <input type="radio" name="paket" id="paket1">Paket 1
+              </label>
+              <label for="paket2">
+                <input type="radio" name="paket" id="paket1">Paket 2
+              </label>
+              <label for="paket3">
+                <input type="radio" name="paket" id="paket1">Paket 3
+              </label>
+              <label for="paket4">
+                <input type="radio" name="paket" id="paket1">Paket 4
+              </label>
+              <label for="paket5">
+                <input type="radio" name="paket" id="paket1">Paket 5
+              </label>
+              <label for="paket6">
+                <input type="radio" name="paket" id="paket6">Paket 6
+              </label>
+            </div>
+
           </div>
         </section>
       </section>

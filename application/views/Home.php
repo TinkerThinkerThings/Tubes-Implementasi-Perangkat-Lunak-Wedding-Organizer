@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tampilan awal</title>
+    <title>Home | Pelanggan</title>
     <link rel="stylesheet" href="<?php echo base_url('asset/css/global.css') ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -122,13 +122,6 @@
         </section>
 
     </section>
-<<<<<<< HEAD
-    <div class="footer">
-        <p>Copyright &copy; 2023 | GreenSide Wedding Organizer</p>
-    </div>
-=======
->>>>>>> c20c9d7f0ef2ba17ff7b5d4fecb3aeac89e31774
 </body>
-<footer>
 
-</footer>
+</html>

@@ -31,25 +31,12 @@ class Admin extends CI_Controller
     }
     $this->load->view('admin/Paket.php');
   }
+
   public function Pembayaran()
   {
     if ($this->session->userdata('Role') !== 'Admin' && $this->session->userdata('Role') !== 'Owner' && $this->session->userdata('Role') !== 'Pelanggan') {
       redirect(base_url('index.php/Verifikasidata/login'));
     }
     $this->load->view('admin/Pembayaran.php');
-  }
-  public function Pengaturan()
-  {
-    if ($this->session->userdata('Role') !== 'Admin' && $this->session->userdata('Role') !== 'Owner' && $this->session->userdata('Role') !== 'Pelanggan') {
-      redirect(base_url('index.php/Verifikasidata/login'));
-    }
-    $this->load->view('admin/Pengaturan.php');
-  }
-  public function Bantuan()
-  {
-    if ($this->session->userdata('Role') !== 'Admin' && $this->session->userdata('Role') !== 'Owner' && $this->session->userdata('Role') !== 'Pelanggan') {
-      redirect(base_url('index.php/Verifikasidata/login'));
-    }
-    $this->load->view('admin/Bantuan.php');
   }
 }

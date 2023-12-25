@@ -45,7 +45,7 @@
       <section class="main">
         <div class="main-top">
           <h1>Dashboard</h1>
-          <i class="fas fa-user-cog"></i>
+          <!-- <i class="fas fa-user-cog"></i> -->
         </div>
         <div class="main-dashboard">
 
