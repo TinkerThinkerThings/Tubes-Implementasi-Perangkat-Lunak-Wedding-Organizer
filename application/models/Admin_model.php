@@ -18,4 +18,17 @@ class Admin_model extends CI_Model
     $this->db->where_in('Role', array('Pelanggan', 'Admin'));
     return $this->db->get('user')->result();
   }
+  public function terimaPesanan($idSewa)
+  {
+    // Lakukan pembaruan status pesanan menjadi 'Diterima' berdasarkan ID_Sewa yang diterima
+    $this->db->where('ID_Sewa', $idSewa);
+    $this->db->update('penyewaan', ['status' => 'diterima']);
+  }
+
+  public function tolakPesanan($idSewa)
+  {
+    // Lakukan pembaruan status pesanan menjadi 'Ditolak' berdasarkan ID_Sewa yang diterima
+    $this->db->where('ID_Sewa', $idSewa);
+    $this->db->update('penyewaan', ['status' => 'ditolak']);
+  }
 }

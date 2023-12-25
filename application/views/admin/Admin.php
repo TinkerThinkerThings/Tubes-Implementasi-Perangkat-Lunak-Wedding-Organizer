@@ -74,16 +74,30 @@
                                     <td><?php echo $row->IdPaket ?></td>
                                     <td><?php echo $row->Pembayaran ?></td>
                                     <td><?php echo $row->harga ?></td>
+                                    <td><?php echo $row->status ?></td>>
                                     <td>
-                                        <button class="terima" type="button">Terima</button>
-                                        <button class="tolak" type="button">Tolak</button>
+                                        <button onclick="terimaPesanan(<?php echo $row->ID_Sewa ?>)">Terima</button>
+                                        <button onclick="tolakPesanan(<?php echo $row->ID_Sewa ?>)">Tolak</button>
+
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                         </table>
                     </div>
                 </div>
+                <script>
+                    function terimaPesanan(idSewa) {
+                        if (confirm('Anda yakin ingin menerima pesanan ini?')) {
+                            window.location.href = '<?php echo base_url('index.php/Admin/terimaPesanan/') ?>' + idSewa;
+                        }
+                    }
 
+                    function tolakPesanan(idSewa) {
+                        if (confirm('Anda yakin ingin menolak pesanan ini?')) {
+                            window.location.href = '<?php echo base_url('index.php/Admin/tolakPesanan/') ?>' + idSewa;
+                        }
+                    }
+                </script>
                 <section class="main-order">
                     <h1>Data User</h1>
                     <div class="list-order-box">
