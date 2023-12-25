@@ -262,16 +262,19 @@ p {
 }
 
 .offering2 {
-  background: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
   margin-bottom: 20px;
 }
 
 .offering2 h3 {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
-
+.offering ~ * {
+  background-color: black;
+  color: rgb(0, 0, 0);
+}
 .tabel {
-  color: #fff;
+  color: #000000;
 }
 
 .tabel .cols-3 {

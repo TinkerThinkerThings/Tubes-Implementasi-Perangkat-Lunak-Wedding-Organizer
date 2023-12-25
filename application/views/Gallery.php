@@ -59,7 +59,7 @@
     <section class="galery" id="galery">
 
         <div class="gal">
-            <img src="<?php echo base_url('asset/photo/galery.jpg') ?>" class="img-fluid" alt="...">
+            <img src="<?php echo base_url('asset/photo/galery.jpg') ?>" class="img-fluid" style="padding-top: 20px; padding-bottom:20px" alt="...">
         </div>
         <div class="gam">
             <h1> Our Galerry</h1>
@@ -67,42 +67,30 @@
             <div class="row">
 
                 <div class="card" style="width: 18rem;">
-                    <img src="<?php echo base_url('asset/photo/1.jpeg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"></p>
-                    </div>
+                    <img src="<?php echo base_url('asset/photo/1.jpeg') ?>" class="card-img-top" style="padding-top: 20px; padding-bottom:20px" alt="...">
+
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="<?php echo base_url('asset/photo/2.jpeg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"></p>
-                    </div>
+                    <img src="<?php echo base_url('asset/photo/2.jpeg') ?>" class="card-img-top" style="padding-top: 20px; padding-bottom:20px" alt="...">
+
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="<?php echo base_url('asset/photo/3.jpeg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"></p>
-                    </div>
+                    <img src="<?php echo base_url('asset/photo/3.jpeg') ?>" class="card-img-top" style="padding-top: 20px; padding-bottom:20px" alt="...">
+
                 </div>
             </div>
             <div class="row" style="padding-top: 25px;">
                 <div class="card" style="width: 18rem;">
-                    <img src="<?php echo base_url('asset/photo/4.jpeg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"></p>
-                    </div>
+                    <img src="<?php echo base_url('asset/photo/4.jpeg') ?>" class="card-img-top" style="padding-top: 20px; padding-bottom:20px" alt="...">
+
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="<?php echo base_url('asset/photo/5.jpeg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"></p>
-                    </div>
+                    <img src="<?php echo base_url('asset/photo/5.jpeg') ?>" class="card-img-top" style="padding-top: 20px; padding-bottom:20px" alt="...">
+
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img src="<?php echo base_url('asset/photo/7.jpeg') ?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"></p>
-                    </div>
+                    <img src="<?php echo base_url('asset/photo/7.jpeg') ?>" class="card-img-top" style="padding-top: 20px; padding-bottom:20px" alt="...">
+
                 </div>
 
             </div>
