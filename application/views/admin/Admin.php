@@ -22,25 +22,17 @@
                             <span class="nav-item">GreenSide</span>
                         </div>
                     </li>
-                    <li><a href="<?php echo base_url('index.php/Home/Admin') ?>">
+                    <li><a href="<?php echo base_url('index.php/Admin/index') ?>">
                             <i class="fas fa-home active" id="beranda"></i>
                             <span class="nav-item active">Beranda</span>
                         </a></li>
-                    <li><a href="<?php echo base_url('index.php/Home/Pesanan') ?>">
+                    <li><a href="<?php echo base_url('index.php/Admin/Paket') ?>">
                             <i class="fas fa-book"></i>
-                            <span class="nav-item">Pesanan</span>
+                            <span class="nav-item">Paket</span>
                         </a></li>
-                    <li><a href="<?php echo base_url('index.php/Home/Pembayaran') ?>">
+                    <li><a href="<?php echo base_url('index.php/Admin/Pembayaran') ?>">
                             <i class="fas fa-wallet"></i>
                             <span class="nav-item">Pembayaran</span>
-                        </a></li>
-                    <li><a href="<?php echo base_url('index.php/Home/Pengaturan') ?>">
-                            <i class="fas fa-cog"></i>
-                            <span class="nav-item">Pengaturan</span>
-                        </a></li>
-                    <li><a href="<?php echo base_url('index.php/Home/Bantuan') ?>">
-                            <i class="fas fa-question-circle"></i>
-                            <span class="nav-item">Bantuan</span>
                         </a></li>
                     <li><a href="" class="logout">
                             <i class="fas fa-sign-out-alt"></i>
@@ -50,6 +42,7 @@
             </nav>
             <!-- CLOSE-NAV-SIDE-BAR -->
 
+            <!-- OPEN-MAIN-SECTION -->
             <section class="main">
                 <div class="main-top">
                     <h1>Dashboard</h1>
@@ -70,116 +63,23 @@
                                 <th>ID Paket</th>
                                 <th>Pembayaran</th>
                                 <th>Harga</th>
-                                <th>Action</th>
+                                <th>Status</th>
                             </tr>
-                            <tr>
-                                <th>01</th>
-                                <th>Des Djaja Mahesa</th>
-                                <th>Bandung</th>
-                                <th>1</th>
-                                <th>Tunai</th>
-                                <th>5000000</th>
-                                <th>
-                                    <button>Aprrove</button>
-                                    <button>Cancel</button>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>02</th>
-                                <th>Des Djaja Mahesa</th>
-                                <th>Bandung</th>
-                                <th>1</th>
-                                <th>Tunai</th>
-                                <th>5000000</th>
-                                <th>
-                                    <button>Aprrove</button>
-                                    <button>Cancel</button>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>03</th>
-                                <th>Des Djaja Mahesa</th>
-                                <th>Bandung</th>
-                                <th>1</th>
-                                <th>Tunai</th>
-                                <th>5000000</th>
-                                <th>
-                                    <button>Aprrove</button>
-                                    <button>Cancel</button>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>04</th>
-                                <th>Des Djaja Mahesa</th>
-                                <th>Bandung</th>
-                                <th>1</th>
-                                <th>Tunai</th>
-                                <th>5000000</th>
-                                <th>
-                                    <button>Aprrove</button>
-                                    <button>Cancel</button>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>05</th>
-                                <th>Des Djaja Mahesa</th>
-                                <th>Bandung</th>
-                                <th>1</th>
-                                <th>Tunai</th>
-                                <th>5000000</th>
-                                <th>
-                                    <button>Aprrove</button>
-                                    <button>Cancel</button>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>06</th>
-                                <th>Des Djaja Mahesa</th>
-                                <th>Bandung</th>
-                                <th>1</th>
-                                <th>Tunai</th>
-                                <th>5000000</th>
-                                <th>
-                                    <button>Aprrove</button>
-                                    <button>Cancel</button>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>07</th>
-                                <th>Des Djaja Mahesa</th>
-                                <th>Bandung</th>
-                                <th>1</th>
-                                <th>Tunai</th>
-                                <th>5000000</th>
-                                <th>
-                                    <button>Aprrove</button>
-                                    <button>Cancel</button>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>08</th>
-                                <th>Des Djaja Mahesa</th>
-                                <th>Bandung</th>
-                                <th>1</th>
-                                <th>Tunai</th>
-                                <th>5000000</th>
-                                <th>
-                                    <button>Aprrove</button>
-                                    <button>Cancel</button>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>09</th>
-                                <th>Des Djaja Mahesa</th>
-                                <th>Bandung</th>
-                                <th>1</th>
-                                <th>Tunai</th>
-                                <th>5000000</th>
-                                <th>
-                                    <button>Aprrove</button>
-                                    <button>Cancel</button>
-                                </th>
-                            </tr>
+
+                            <?php foreach ($dataPenyewaan as $row) : ?>
+                                <tr>
+                                    <td><?php echo $row->ID_Sewa ?></td>
+                                    <td><?php echo $row->Nama_Pelanggan ?></td>
+                                    <td><?php echo $row->Alamat ?></td>
+                                    <td><?php echo $row->IdPaket ?></td>
+                                    <td><?php echo $row->Pembayaran ?></td>
+                                    <td><?php echo $row->harga ?></td>
+                                    <td>
+                                        <button class="terima" type="button">Terima</button>
+                                        <button class="tolak" type="button">Tolak</button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </table>
                     </div>
                 </div>
@@ -187,7 +87,27 @@
                 <section class="main-order">
                     <h1>Data User</h1>
                     <div class="list-order-box">
+                        <table>
+                            <tr class="judul">
+                                <th>Nama User</th>
+                                <th>Alamat User</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Email</th>
+                                <th>Nomor Handphone</th>
+                                <th>Roles</th>
+                            </tr>
 
+                            <?php foreach ($dataUser as $row) : ?>
+                                <tr>
+                                    <td><?php echo $row->Nama ?></td>
+                                    <td><?php echo $row->Alamat ?></td>
+                                    <td><?php echo $row->Jenis_Kelamin ?></td>
+                                    <td><?php echo $row->Email ?></td>
+                                    <td><?php echo $row->No_Hp ?></td>
+                                    <td><?php echo $row->Role ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </table>
                     </div>
                 </section>
             </section>

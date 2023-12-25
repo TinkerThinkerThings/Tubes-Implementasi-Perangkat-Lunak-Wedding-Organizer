@@ -123,7 +123,7 @@
 
     </section>
     <div class="footer">
-        <small>Copyright &copy; 2022 - Greenside. All Right Reserved</small>
+        <p>Copyright &copy; 2023 | GreenSide Wedding Organizer</p>
     </div>
 </body>
 

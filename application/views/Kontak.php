@@ -80,16 +80,13 @@
                 <i class="fab fa-instagram my-floatt"></i>
             </a>
             <a href="https://api.whatsapp.com/send?phone=6281293984743&text=Hallo%20saya%20mau%20order!!" class="float" target="_blank">
-                <i class="fa fa-whatsapp my-floatt"></i>
+                <i class="fab fa-whatsapp my-float"></i>
                 <i class=""></i>
             </a>
 
         </div>
     </section>
     <!-- End Of Kontak -->
-    <!-- FOOTER -->
-
-    <!-- END OF FOOTER -->
     <br>
 </body>
 

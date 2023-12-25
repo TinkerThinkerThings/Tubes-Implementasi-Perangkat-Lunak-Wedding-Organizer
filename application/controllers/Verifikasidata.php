@@ -40,7 +40,7 @@ class Verifikasidata extends CI_Controller
             // Redirect based on user role
             switch ($user->Role) {
                 case 'Admin':
-                    redirect(base_url('index.php/Home/Admin'));
+                    redirect(base_url('index.php/Admin/index'));
                     break;
                 case 'Pelanggan':
                     redirect(base_url('index.php/Home/index'));
