@@ -56,9 +56,13 @@
                     <i class="fas fa-user-cog"></i>
                 </div>
                 <div class="main-dashboard">
-                    <h1>Pesanan Terbaru</h1>
                     <div class="list-dashboard-box">
                         <table>
+                            <tr class="judul">
+                                <td colspan="7">
+                                    <h1>Pesanan Terbaru</h1>
+                                </td>
+                            </tr>
                             <tr>
                                 <th>ID Sewa</th>
                                 <th>Nama Pelanggan</th>
@@ -67,6 +71,114 @@
                                 <th>Pembayaran</th>
                                 <th>Harga</th>
                                 <th>Action</th>
+                            </tr>
+                            <tr>
+                                <th>01</th>
+                                <th>Des Djaja Mahesa</th>
+                                <th>Bandung</th>
+                                <th>1</th>
+                                <th>Tunai</th>
+                                <th>5000000</th>
+                                <th>
+                                    <button>Aprrove</button>
+                                    <button>Cancel</button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>02</th>
+                                <th>Des Djaja Mahesa</th>
+                                <th>Bandung</th>
+                                <th>1</th>
+                                <th>Tunai</th>
+                                <th>5000000</th>
+                                <th>
+                                    <button>Aprrove</button>
+                                    <button>Cancel</button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>03</th>
+                                <th>Des Djaja Mahesa</th>
+                                <th>Bandung</th>
+                                <th>1</th>
+                                <th>Tunai</th>
+                                <th>5000000</th>
+                                <th>
+                                    <button>Aprrove</button>
+                                    <button>Cancel</button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>04</th>
+                                <th>Des Djaja Mahesa</th>
+                                <th>Bandung</th>
+                                <th>1</th>
+                                <th>Tunai</th>
+                                <th>5000000</th>
+                                <th>
+                                    <button>Aprrove</button>
+                                    <button>Cancel</button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>05</th>
+                                <th>Des Djaja Mahesa</th>
+                                <th>Bandung</th>
+                                <th>1</th>
+                                <th>Tunai</th>
+                                <th>5000000</th>
+                                <th>
+                                    <button>Aprrove</button>
+                                    <button>Cancel</button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>06</th>
+                                <th>Des Djaja Mahesa</th>
+                                <th>Bandung</th>
+                                <th>1</th>
+                                <th>Tunai</th>
+                                <th>5000000</th>
+                                <th>
+                                    <button>Aprrove</button>
+                                    <button>Cancel</button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>07</th>
+                                <th>Des Djaja Mahesa</th>
+                                <th>Bandung</th>
+                                <th>1</th>
+                                <th>Tunai</th>
+                                <th>5000000</th>
+                                <th>
+                                    <button>Aprrove</button>
+                                    <button>Cancel</button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>08</th>
+                                <th>Des Djaja Mahesa</th>
+                                <th>Bandung</th>
+                                <th>1</th>
+                                <th>Tunai</th>
+                                <th>5000000</th>
+                                <th>
+                                    <button>Aprrove</button>
+                                    <button>Cancel</button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>09</th>
+                                <th>Des Djaja Mahesa</th>
+                                <th>Bandung</th>
+                                <th>1</th>
+                                <th>Tunai</th>
+                                <th>5000000</th>
+                                <th>
+                                    <button>Aprrove</button>
+                                    <button>Cancel</button>
+                                </th>
                             </tr>
                         </table>
                     </div>
