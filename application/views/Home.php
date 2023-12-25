@@ -122,7 +122,9 @@
         </section>
 
     </section>
+    <div class="footer">
+        <small>Copyright &copy; 2022 - Greenside. All Right Reserved</small>
+    </div>
 </body>
-<footer>
 
-</footer>
+</html>

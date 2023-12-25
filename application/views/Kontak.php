@@ -70,7 +70,7 @@
         </div>
         <div class="kontak">
             <div class="row">
-                <img src="./src/assets/images/" class="card-img-top" height="20%" alt="">
+
             </div>
         </div>
 
