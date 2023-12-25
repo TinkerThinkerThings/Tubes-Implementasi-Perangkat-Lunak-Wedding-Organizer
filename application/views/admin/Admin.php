@@ -12,30 +12,33 @@
     </head>
 
     <body>
+        <!-- OPEN-NAV-SIDE-BAR -->
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="#" class="logo">
-                            <img src="src/assets/images/logo.png" alt="GreenSide">
+                    <li>
+                        <div class="logo">
+                            <img src="../../asset/photo/logo.png" alt="GreenSide">
                             <span class="nav-item">GreenSide</span>
+                        </div>
+                    </li>
+                    <li><a href="<?php echo base_url('index.php/Home/Admin') ?>">
+                            <i class="fas fa-home active" id="beranda"></i>
+                            <span class="nav-item active">Beranda</span>
                         </a></li>
-                    <li><a href="">
-                            <i class="fas fa-home" id="beranda"></i>
-                            <span class="nav-item">Beranda</span>
-                        </a></li>
-                    <li><a href="">
+                    <li><a href="<?php echo base_url('index.php/Home/Pesanan') ?>">
                             <i class="fas fa-book"></i>
                             <span class="nav-item">Pesanan</span>
                         </a></li>
-                    <li><a href="">
+                    <li><a href="<?php echo base_url('index.php/Home/Pembayaran') ?>">
                             <i class="fas fa-wallet"></i>
                             <span class="nav-item">Pembayaran</span>
                         </a></li>
-                    <li><a href="">
+                    <li><a href="<?php echo base_url('index.php/Home/Pengaturan') ?>">
                             <i class="fas fa-cog"></i>
                             <span class="nav-item">Pengaturan</span>
                         </a></li>
-                    <li><a href="">
+                    <li><a href="<?php echo base_url('index.php/Home/Bantuan') ?>">
                             <i class="fas fa-question-circle"></i>
                             <span class="nav-item">Bantuan</span>
                         </a></li>
@@ -45,6 +48,7 @@
                         </a></li>
                 </ul>
             </nav>
+            <!-- CLOSE-NAV-SIDE-BAR -->
 
             <section class="main">
                 <div class="main-top">
@@ -52,12 +56,26 @@
                     <i class="fas fa-user-cog"></i>
                 </div>
                 <div class="main-dashboard">
-
+                    <h1>Pesanan Terbaru</h1>
+                    <div class="list-dashboard-box">
+                        <table>
+                            <tr>
+                                <th>ID Sewa</th>
+                                <th>Nama Pelanggan</th>
+                                <th>Alamat</th>
+                                <th>ID Paket</th>
+                                <th>Pembayaran</th>
+                                <th>Harga</th>
+                                <th>Action</th>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
 
                 <section class="main-order">
-                    <h1>Pesanan Terbaru</h1>
+                    <h1>Data User</h1>
                     <div class="list-order-box">
+
                     </div>
                 </section>
             </section>
