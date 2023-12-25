@@ -10,37 +10,42 @@
   position: static;
   background-color: black;
 }
-.pelayanan{
 
+.pelayanan {
   background-color: black;
   height: auto;
   margin-top: 100px;
   padding-bottom: 20px;
   padding-top: 25px;
 }
-.pelayanan h1{
+
+.pelayanan h1 {
   color: rgb(255, 255, 255);
 }
-.pelayanan h4{
+
+.pelayanan h4 {
   color: rgb(255, 255, 255);
   padding-top: 15px;
   font-size: 18px;
 }
 
-.home{
+.home {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.home h1{
+
+.home h1 {
   font-size: 36px;
   padding-top: 20px;
 }
-.home .row h1{
+
+.home .row h1 {
   font-size: 24px;
   padding-right: 150px;
 }
-.home h2{
+
+.home h2 {
   color: #777;
   font-size: 20px;
   text-align: justify;
@@ -48,14 +53,13 @@
   padding-right: 200px;
   padding-top: 20px;
 }
-.home .row{
+
+.home .row {
   padding-left: 200px;
   padding-right: 50px;
   padding-top: 20px;
 }
-.testi{
-  padding-top: 100px;
-}
+
 .logo a {
   font-size: 50px;
   font-weight: 800;
@@ -64,14 +68,16 @@
   float: left;
   padding-left: 25px;
 }
+
 .menu {
   float: right;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
-
+.testi{
+  padding-top: 150px;
+}
 /* NAVIGATION */
 nav {
   width: 100%;
@@ -88,9 +94,11 @@ nav ul {
   padding: 0;
   overflow: hidden;
 }
+
 nav ul li {
   float: left;
 }
+
 nav ul li a {
   color: white;
   font-weight: bold;
@@ -110,11 +118,13 @@ nav ul li a:hover {
   transition: 0.5s;
   font-size: 120%;
 }
+
 @media (max-width: 700px) {
   .text-box h1 {
     font-size: 20px;
   }
 }
+
 /* Course */
 .course {
   width: 80%;
@@ -122,10 +132,12 @@ nav ul li a:hover {
   text-align: center;
   padding-top: 100px;
 }
+
 h1 {
   font-size: 36px;
   font-weight: 600;
 }
+
 p {
   color: #696969;
   font-size: 14px;
@@ -133,12 +145,14 @@ p {
   line-height: 22px;
   padding: 10px;
 }
+
 .row {
   margin-top: 5%;
   display: flex;
   justify-content: space-between;
   padding-bottom: 100px;
 }
+
 .course-col {
   flex-basis: 31%;
   background: #fff3f3;
@@ -147,12 +161,14 @@ p {
   padding: 20px 12px;
   box-sizing: border-box;
 }
+
 .paket {
   width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 50px;
 }
+
 .paket-col {
   flex-basis: 32%;
   border-radius: 10px;
@@ -169,12 +185,15 @@ p {
   top: 0;
   left: 0;
 }
+
 .layer h3 {
   color: #fff;
 }
+
 .layer:hover {
   background: rgba(252, 61, 61, 0.7);
 }
+
 .b-example-divider {
   height: 3rem;
   background-color: rgba(0, 0, 0, 0.1);
@@ -182,70 +201,85 @@ p {
   border-width: 1px 0;
   box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
+
 .bi {
   vertical-align: -0.125em;
   fill: currentColor;
 }
+
 .wrapper .logo a {
   text-decoration: none;
 }
-.galery{
+
+/* Galery */
+.galery {
   width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 100px;
 }
+
 .gal {
   margin: auto;
-  width:50%;
+  width: 50%;
   height: 50%;
   padding: 20px;
 }
-.gam{
+
+.gam {
   padding-top: 25px;
   padding-bottom: 25px;
 }
-.gam h1{
+
+.gam h1 {
   padding-bottom: 25px;
 }
-.judul{
+
+/* Judul */
+.judul {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.judul h1{
+
+.judul h1 {
   font-size: 36px;
 }
-.judul h2{
+
+.judul h2 {
   font-size: 20px;
 }
-.map{
+
+/* Map */
+.map {
   text-align: center;
 }
 
-.harga{
+/* Harga */
+.harga {
   padding-left: 25%;
   padding-right: 25%;
-  
 }
-.harga h1{
+
+.harga h1 {
   text-align: center;
   font-size: 36px;
   padding-top: 50px;
 }
-#btnig{
+
+#btnig {
   padding-top: 50px;
   padding-bottom: 100px;
 }
-.card p{
-  color:rgb(255, 255, 255);
 
+.card p {
+  color: rgb(255, 255, 255);
 }
-#carouselExample{
+
+#carouselExample {
   width: 50%;
-
- 
 }
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -256,25 +290,39 @@ p {
   display: block;
   clear: both;
 }
+
+/* Offering */
 .offering {
   background: #000;
   margin-top: 20px;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
 }
 
+.offering h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.offering p {
+  color: #aaaaaa;
+  word-spacing: 2px;
+  line-height: 25px;
+}
+
+/* Offering2 */
 .offering2 {
-  background: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
   margin-bottom: 20px;
 }
 
 .offering2 h3 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
-.offering ~ * {
-  background-color: black;
-  color: rgb(0, 0, 0);
-}
+
 .tabel {
-  color: #000000;
+  color: #fff;
 }
 
 .tabel .cols-3 {
@@ -284,15 +332,9 @@ p {
   text-align: center;
   float: left;
 }
+
 .tabel .cols-3 h4 {
   margin: 10px 0;
-}
-
-.offering p {
-  color: #aaaaaa;
-  text-align: center;
-  word-spacing: 2px;
-  line-height: 25px;
 }
 
 .tabel2 {
@@ -311,6 +353,7 @@ p {
   margin: 10px 0;
 }
 
+/* Floating Buttons */
 .float {
   position: fixed;
   width: 60px;
@@ -348,4 +391,22 @@ p {
 
 .my-floatt {
   margin-top: 16px;
+}
+/* Konfirmasi */
+.kon {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.kon h1 {
+  font-size: 36px;
+  padding-top: 20px;
+}
+.kon h2{
+  color: #777;
+  font-size: 20px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 20px;
 }
