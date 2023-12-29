@@ -61,14 +61,13 @@
         <h1>Indoor</h1>
         <div class="row">
             <?php foreach ($indoorPaket as $item) { ?>
-                <div class="card" style="width: 18rem; height:25rem; padding-top:20px;">
+                <div class="card" style="width: 18rem; height:25rem; margin:20px; ; padding-top:20px;">
 
                     <img src="<?php echo $item->gambar; ?>" class="card-img-top" style="height:40% " style="" alt="...">
 
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $item->namapaket; ?></h5>
-                        <p class="card-text text-dark"><?php echo $item->deskripsi; ?></p>
-
+                        <p class="card-text text-dark" style=""><?php echo $item->deskripsi; ?></p>
                         <a href="<?php echo base_url('index.php/Paket/Detail/' . $item->IdPaket) ?>" class="btn btn-primary">Pesan Sekarang</a>
                     </div>
                 </div>
