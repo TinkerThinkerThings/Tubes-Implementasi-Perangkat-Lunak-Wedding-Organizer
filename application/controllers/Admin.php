@@ -41,14 +41,32 @@ class Admin extends CI_Controller
     if ($this->session->userdata('Role') !== 'Admin' && $this->session->userdata('Role') !== 'Owner' && $this->session->userdata('Role') !== 'Pelanggan') {
       redirect(base_url('index.php/Verifikasidata/login'));
     }
-    $this->load->view('admin/Paket.php');
+    $data['dataPaket'] = $this->Admin_model->getPaket();
+    $this->load->view('admin/Paket.php', $data);
   }
 
-  public function getPaketData($idPaket)
+  public function tambah_paket()
   {
-    $data['dataPaket'] = $this->Admin_model->getDataPaketById($idPaket);
-    $this->load->view('admin/ListPaket.php', $data);
+    if ($this->input->post()) {
+      // Menangani upload gambar
+      $config['upload_path'] = './asset/photo';
+      $config['allowed_types'] = 'gif|jpg|png|jpeg';
+      $this->load->library('upload', $config);
+
+      if ($this->upload->do_upload('gambar')) {
+        $upload_data = $this->upload->data();
+        $paket['gambar'] = $upload_data['file_name'];
+      } else {
+        // Handle jika upload gagal
+        $error = array('error' => $this->upload->display_errors());
+        print_r($error);
+      }
+
+      $this->Admin_model->tambahPaket($paket);
+      $this->load->view('admin/tambah_paket.php');
+    }
   }
+
 
   public function Pembayaran()
   {

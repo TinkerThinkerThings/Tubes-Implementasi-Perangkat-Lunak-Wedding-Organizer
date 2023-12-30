@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="<?php echo base_url('asset/css/admin.css') ?>" />
     <!-- Font Awesome Cdn Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Data Table -->
+    <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
   </head>
 
@@ -46,34 +50,60 @@
       <!-- OPEN-MAIN-ORDER -->
       <section class="main">
         <section class="main-order">
-          <h1>Daftar Paket</h1>
-          <div class="list-order-box">
-            <h5 class="pilih-paket">Pilih Paket : </h5>
+          <div class="tambah-paket">
+            <h1>Daftar Paket</h1>
+            <a href="<?php echo base_url('index.php/Admin/tambah_paket') ?>"> + Tambah Paket</a>
+          </div>
+          <div class="list-order-box-paket">
             <div class="form-group">
-              <label for="paket1">
-                <input type="radio" name="paket" id="paket1">Paket 1
-              </label>
-              <label for="paket2">
-                <input type="radio" name="paket" id="paket1">Paket 2
-              </label>
-              <label for="paket3">
-                <input type="radio" name="paket" id="paket1">Paket 3
-              </label>
-              <label for="paket4">
-                <input type="radio" name="paket" id="paket1">Paket 4
-              </label>
-              <label for="paket5">
-                <input type="radio" name="paket" id="paket1">Paket 5
-              </label>
-              <label for="paket6">
-                <input type="radio" name="paket" id="paket6">Paket 6
-              </label>
+              <table id="example" class="display" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>ID Paket</th>
+                    <th>Nama Paket</th>
+                    <th>Deskripsi</th>
+                    <th>Keterangan</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <?php foreach ($dataPaket as $row) : ?>
+                    <tr>
+                      <td><?php echo $row->IdPaket ?></td>
+                      <td><?php echo $row->namapaket ?></td>
+                      <td><?php echo $row->deskripsi ?></td>
+                      <td><?php echo $row->keterangan ?></td>
+                      <td></td>
+                    </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
             </div>
 
           </div>
         </section>
       </section>
     </div>
+    <!-- Link JS Data Table -->
+
+    <script>
+      new DataTable('#example', {
+        columnDefs: [{
+            targets: [0],
+            orderData: [0, 1]
+          },
+          {
+            targets: [1],
+            orderData: [1, 0]
+          },
+          {
+            targets: [3],
+            orderData: [3, 0]
+          }
+        ]
+      });
+    </script>
   </body>
 
   </html>
