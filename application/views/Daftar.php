@@ -20,10 +20,10 @@
                     <input type="radio" id="Perempuan" name="Jenis_Kelamin" value="Perempuan">
                     <label for="perempuan">Perempuan</label>
                     <input type="email" class="input" placeholder="Email" name="Email" required />
-                    <input type="text" class="input" placeholder="No_Hp" name="No_Hp" />
+                    <input type="text" class="input" placeholder="Nomor Handphone" name="No_Hp" />
                 </div>
                 <button type="submit" class="submit-btn">Sign up</button>
-                <a href="login_form.php"> Already have an account?</a>
+                <a href="<?php echo base_url('index.php/Login') ?>">Already have account?</a>
             </div>
         </form>
     </div>
