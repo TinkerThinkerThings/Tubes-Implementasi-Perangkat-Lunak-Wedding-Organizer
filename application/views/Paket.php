@@ -62,7 +62,7 @@
         <div class="row mt-1">
             <?php foreach ($indoorPaket as $item) { ?>
                 <div class="col-4">
-                    <div class="card" style="width: 18rem; height:25rem; padding-top:20px;">
+                    <div class="card" style="width: 18rem; height:25rem; margin-top:20px;  padding:20px;">
                         <img src="<?php echo $item->gambar; ?>" class="card-img-top" style="height:40% " style="" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $item->namapaket; ?></h5>
@@ -80,7 +80,7 @@
         <div class="row">
             <?php foreach ($outdoorPaket as $item) { ?>
                 <div class="col-4">
-                    <div class="card" style="width: 18rem; height:25rem; padding-top:20px;">
+                    <div class="card" style="width: 18rem; height:25rem; margin-top:20px; padding:20px;">
 
                         <img src="<?php echo $item->gambar; ?>" class="card-img-top" style="height:40%" alt="...">
 
