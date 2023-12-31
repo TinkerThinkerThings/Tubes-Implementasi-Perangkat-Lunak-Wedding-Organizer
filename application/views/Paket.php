@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,300;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/footers/">
 
@@ -59,17 +59,16 @@
     <!-- Paket -->
     <section class="paket" id="paket">
         <h1>Indoor</h1>
-        <div class="row">
+        <div class="row mt-1">
             <?php foreach ($indoorPaket as $item) { ?>
-                <div class="card" style="width: 18rem; height:25rem; padding-top:20px;">
-
-                    <img src="<?php echo $item->gambar; ?>" class="card-img-top" style="height:40% " style="" alt="...">
-
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $item->namapaket; ?></h5>
-                        <p class="card-text text-dark"><?php echo $item->deskripsi; ?></p>
-
-                        <a href="<?php echo base_url('index.php/Paket/Detail/' . $item->IdPaket) ?>" class="btn btn-primary">Pesan Sekarang</a>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem; height:25rem; margin-top:20px;  padding:20px;">
+                        <img src="<?php echo $item->gambar; ?>" class="card-img-top" style="height:40% " style="" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $item->namapaket; ?></h5>
+                            <p class="card-text text-dark"><?php echo $item->deskripsi; ?></p>
+                            <a href="<?php echo base_url('index.php/Paket/Detail/' . $item->IdPaket) ?>" class="btn btn-primary">Pesan Sekarang</a>
+                        </div>
                     </div>
                 </div>
             <?php } ?>
@@ -80,15 +79,17 @@
         <h1>Outdoor</h1>
         <div class="row">
             <?php foreach ($outdoorPaket as $item) { ?>
-                <div class="card" style="width: 18rem; height:25rem; padding-top:20px;">
+                <div class="col-4">
+                    <div class="card" style="width: 18rem; height:25rem; margin-top:20px; padding:20px;">
 
-                    <img src="<?php echo $item->gambar; ?>" class="card-img-top" style="height:40%" alt="...">
+                        <img src="<?php echo $item->gambar; ?>" class="card-img-top" style="height:40%" alt="...">
 
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $item->namapaket; ?></h5>
-                        <p class="card-text text-dark"><?php echo $item->deskripsi; ?></p>
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $item->namapaket; ?></h5>
+                            <p class="card-text text-dark"><?php echo $item->deskripsi; ?></p>
 
-                        <a href="<?php echo base_url('index.php/Paket/Detail/' . $item->IdPaket) ?>" class="btn btn-primary">Pesan Sekarang</a>
+                            <a href="<?php echo base_url('index.php/Paket/Detail/' . $item->IdPaket) ?>" class="btn btn-primary">Pesan Sekarang</a>
+                        </div>
                     </div>
                 </div>
             <?php } ?>

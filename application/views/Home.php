@@ -72,7 +72,7 @@
                 <h1>Testimoni</h1>
                 <div class=" row">
 
-                    <img src="<?php echo base_url('asset/photo/gb3.jpg') ?>" class="img-thumbnail" style="width: 400px;" alt="...">
+                    <img src="<?php echo base_url('asset/photo/gb3.jpg') ?>" class="img-thumbnail" style="width: 400px; padding:20px" alt="...">
                     <h1 class="col">"We verry happy, WO ini memberi kami pengalaman menikah yang sangat diisi dengan kebahagiaan. Dengan segala WO yang ada GreenSide adalah yang terbaik " <br> Deriansyah & Reva Fidela</h1>
                 </div>
         </div>

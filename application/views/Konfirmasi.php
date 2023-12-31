@@ -58,14 +58,14 @@
     </section>
     <section class="kon" id="kon">
         <div class="gal">
-            <img src="<?php echo base_url('asset/photo/paket1.jpg') ?>" class="img-fluid" alt="...">
+            <img src="<?php echo base_url('asset/photo/okay.png') ?>" class="img-fluid" alt="...">
         </div>
         <div>
-            <h1> Pembayaran telah berhasil </h1>
-            <h2>Terima Kasih Telah Menyewa Wedding Organizer Kami</h2>
+            <h1> Konfirmasi telah berhasil </h1>
+            <h2> Siahkan kirim bukti pembayaran ke nomer Whatsapp dibawah ini</h2>
         </div>
         <div class="d-grid gap-2 mt-5 col-6 mx-auto">
-            <a href="<?php echo base_url('index.php/Paket/') ?>" class="btn btn-primary">Pesan Kembali</a>
+            <a href="https://api.whatsapp.com/send?phone=6281293984743&text=Hallo%20saya%20mau%20order!!'" class="btn btn-primary">Klik untuk mengirim bukti</a>
         </div>
 
     </section>
