@@ -15,10 +15,14 @@
                     <input type="text" class="input" placeholder="Nama" name="Nama" />
                     <input type="text" class="input" placeholder="Alamat" name="Alamat" />
                     <input type="password" class="input" placeholder="Password" name="Password" required />
-                    <input type="radio" id="Laki - Laki" name="Jenis_Kelamin" value="Laki-Laki">
-                    <label for="lakiLaki">Laki - Laki</label><br>
-                    <input type="radio" id="Perempuan" name="Jenis_Kelamin" value="Perempuan">
-                    <label for="perempuan">Perempuan</label>
+                    <label>
+                        <input type="radio" id="Laki - Laki" name="Jenis_Kelamin" checked/>
+                        <span>Laki - Laki</span>
+                    </label>
+                    <label>
+                        <input type="radio" id="Perempuan" name="Jenis_Kelamin" />
+                        <span>Perempuan</span>
+                    </label>
                     <input type="email" class="input" placeholder="Email" name="Email" required />
                     <input type="text" class="input" placeholder="Nomor Handphone" name="No_Hp" />
                 </div>
