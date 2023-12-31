@@ -39,7 +39,7 @@
               <span class="nav-item">Pembayaran</span>
             </a></li>
           </a></li>
-          <li><a href="" class="logout">
+          <li><a href="<?php echo base_url('index.php/Verifikasidata/logout') ?>" class="logout">
               <i class="fas fa-sign-out-alt"></i>
               <span class="nav-item">Keluar</span>
             </a></li>
@@ -74,7 +74,14 @@
                       <td><?php echo $row->namapaket ?></td>
                       <td><?php echo $row->deskripsi ?></td>
                       <td><?php echo $row->keterangan ?></td>
-                      <td></td>
+                      <td>
+                        <a href="<?php echo base_url('index.php/Admin/edit_paket/' . $row->IdPaket) ?>" class="btn-edit">
+                          <i class="fas fa-edit"></i>
+                        </a>
+                        <a href="<?php echo base_url('index.php/Admin/hapus_paket/' . $row->IdPaket) ?>" class="btn-delete">
+                          <i class="fas fa-trash"></i>
+                        </a>
+                      </td>
                     </tr>
                   <?php endforeach; ?>
                 </tbody>
@@ -85,7 +92,19 @@
         </section>
       </section>
     </div>
-    <!-- Link JS Data Table -->
+    <script>
+      $(document).ready(function() {
+        $(".btn-delete").click(function() {
+          var confirm = window.confirm("Apakah Anda yakin ingin menghapus paket ini?");
+          if (confirm) {
+            // Lanjutkan penghapusan
+          } else {
+            // Batalkan penghapusan
+            return false;
+          }
+        });
+      });
+    </script>
 
     <script>
       new DataTable('#example', {

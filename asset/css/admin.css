@@ -119,6 +119,15 @@ a:hover {
 	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 	overflow: scroll;
 }
+.list-dashboard-box-card {
+	width: 100%;
+	height: 220px;
+	padding: 10px 10px 30px 10px;
+	margin-top: 10px;
+	background-color: #fff;
+	border-radius: 15px;
+	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
 .list-dashboard-box table {
 	width: 100%;
 	margin: 0px auto;
@@ -196,28 +205,96 @@ button {
 /* Paket.php */
 .list-order-box-paket {
 	width: 100%;
-	height: 500px;
+	height: 550px;
 	padding: 10px 10px 30px 10px;
 	margin-top: 10px;
 	background: #fff;
 	border-radius: 10px;
 	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-.tambah-paket {
-	position: relative;
-	padding: 20px;
+.list-order-box-paket-tambah-paket {
 	width: 100%;
+	height: 489px;
+	padding: 10px 10px 30px 10px;
+	margin-top: 10px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.list-order-box-paket-tambah-paket .form-group input {
+	display: block;
+	margin-bottom: 15px;
+	width: 100%;
+}
+.list-order-box-paket-tambah-paket .form-group select {
+	display: block;
+	margin-left: -3px;
+	margin-bottom: 15px;
+	width: 100%;
+}
+.tambah-paket {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 20px;
 }
 .tambah-paket h1 {
-	display: flex;
-	width: 100%;
+	flex-grow: 1;
 }
 .tambah-paket a {
-	position: absolute;
-	right: 0;
-	margin: 10px 30px;
+	margin-right: 30px; /* Adjust right margin as needed */
 	color: rgb(110, 109, 109);
 	cursor: pointer;
+}
+.tambah-paket-btn {
+	width: 100%;
+	background-color: rgb(110, 109, 109);
+	font-weight: 600;
+	height: 40px;
+	font-size: 16px;
+	margin-top: 45px;
+}
+
+.btn-edit,
+.btn-delete {
+	display: inline;
+	width: 65px;
+	height: 65px;
+	text-decoration: none;
+	color: #eee;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-right: 7px;
+}
+
+.btn-edit {
+	background-color: orange;
+}
+
+.btn-delete {
+	background-color: red;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+	background-color: #333;
+	color: #0c0c0c;
+}
+
+.btn-kembali {
+	text-decoration: none;
+	color: #fff;
+	background-color: #efe;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-right: 5px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.btn-kembali:hover {
+	background-color: #333;
 }
 
 label input {

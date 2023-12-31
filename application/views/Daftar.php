@@ -23,7 +23,7 @@
                     <input type="text" class="input" placeholder="Nomor Handphone" name="No_Hp" />
                 </div>
                 <button type="submit" class="submit-btn">Sign up</button>
-                <a href="<?php echo base_url('index.php/Login') ?>">Already have account?</a>
+                <a href="<?php echo base_url('index.php/Verifikasidata') ?>">Already have account?</a>
             </div>
         </form>
     </div>

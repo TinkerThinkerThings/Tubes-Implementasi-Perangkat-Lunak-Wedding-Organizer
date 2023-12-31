@@ -66,10 +66,38 @@ class Admin_model extends CI_Model
       "keterangan" => $keterangan,
     );
 
-    $config['upload_path'] = './asset/photo';
+    $config['upload_path'] = './asset/photo'; // Lokasi penyimpanan gambar di server
     $config['allowed_types'] = 'gif|jpg|png|jpeg';
-
     $this->load->library('upload', $config);
-    return $this->db->insert("paket", $paket);
+
+    if ($this->upload->do_upload('gambar')) {
+      $upload_data = $this->upload->data();
+      $paket['gambar'] = 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/' . $upload_data['file_name']; // Path lokasi gambar
+
+      return $this->db->insert("paket", $paket);
+    } else {
+      // Handle jika upload gagal
+      $error = array('error' => $this->upload->display_errors());
+      print_r($error);
+      return false;
+    }
+  }
+
+  public function hapusPaket($idPaket)
+  {
+    $this->db->where('IdPaket', $idPaket);
+    $this->db->delete('paket');
+  }
+
+  public function getPaketById($idPaket)
+  {
+    $this->db->where('IdPaket', $idPaket);
+    return $this->db->get('paket')->row();
+  }
+
+  public function updatePaket($idPaket, $dataPaket)
+  {
+    $this->db->where('IdPaket', $idPaket);
+    $this->db->update('paket', $dataPaket);
   }
 }

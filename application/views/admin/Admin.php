@@ -49,56 +49,10 @@
                     <!-- <i class="fas fa-user-cog"></i> -->
                 </div>
                 <div class="main-dashboard">
-                    <div class="list-dashboard-box">
-                        <table>
-                            <tr class="judul">
-                                <td colspan="8">
-                                    <h1>Pesanan Terbaru</h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>ID Sewa</th>
-                                <th>Nama Pelanggan</th>
-                                <th>Alamat</th>
-                                <th>ID Paket</th>
-                                <th>Pembayaran</th>
-                                <th>Harga</th>
-                                <th>Status</th>
-                                <th>Aksi</th>
-                            </tr>
-
-                            <?php foreach ($dataPenyewaan as $row) : ?>
-                                <tr>
-                                    <td><?php echo $row->ID_Sewa ?></td>
-                                    <td><?php echo $row->Nama_Pelanggan ?></td>
-                                    <td><?php echo $row->Alamat ?></td>
-                                    <td><?php echo $row->IdPaket ?></td>
-                                    <td><?php echo $row->Pembayaran ?></td>
-                                    <td><?php echo $row->harga ?></td>
-                                    <td><?php echo $row->status ?></td>>
-                                    <td>
-                                        <button class="terima" onclick="terimaPesanan(<?php echo $row->ID_Sewa ?>)">Terima</button>
-                                        <button class="tolak" onclick="tolakPesanan(<?php echo $row->ID_Sewa ?>)">Tolak</button>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </table>
+                    <div class="list-dashboard-box-card">
                     </div>
                 </div>
-                <!-- JAVASCRIPT-ACTION -->
-                <script>
-                    function terimaPesanan(idSewa) {
-                        if (confirm('Anda yakin ingin menerima pesanan ini?')) {
-                            window.location.href = '<?php echo base_url('index.php/Admin/terimaPesanan/') ?>' + idSewa;
-                        }
-                    }
 
-                    function tolakPesanan(idSewa) {
-                        if (confirm('Anda yakin ingin menolak pesanan ini?')) {
-                            window.location.href = '<?php echo base_url('index.php/Admin/tolakPesanan/') ?>' + idSewa;
-                        }
-                    }
-                </script>
                 <section class="main-order">
                     <h1>Data User</h1>
                     <div class="list-order-box">
