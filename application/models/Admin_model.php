@@ -7,10 +7,23 @@ class Admin_model extends CI_Model
     parent::__construct();
   }
 
-  public function getOrder()
+  // ! Admin.php
+  public function countDataUser()
   {
-    $this->db->order_by('ID_Sewa', 'DESC');
-    return $this->db->get('penyewaan')->result();
+    $query = $this->db->query("SELECT COUNT(*) AS total FROM user");
+    return $query->row()->total;
+  }
+
+  public function countDataPenyewaan()
+  {
+    $query = $this->db->query("SELECT COUNT(*) AS total FROM penyewaan");
+    return $query->row()->total;
+  }
+
+  public function countDataPaket()
+  {
+    $query = $this->db->query("SELECT COUNT(*) AS total FROM paket");
+    return $query->row()->total;
   }
 
   public function getDataUser()
@@ -18,19 +31,8 @@ class Admin_model extends CI_Model
     $this->db->where_in('Role', array('Pelanggan', 'Admin'));
     return $this->db->get('user')->result();
   }
-  public function terimaPesanan($idSewa)
-  {
-    $this->db->where('ID_Sewa', $idSewa);
-    $this->db->update('penyewaan', ['status' => 'diterima']);
-  }
 
-  public function tolakPesanan($idSewa)
-  {
-    $this->db->where('ID_Sewa', $idSewa);
-    $this->db->update('penyewaan', ['status' => 'ditolak']);
-  }
-
-
+  // ! Paket.php
   public function getPaket()
   {
     return $this->db->get('paket')->result();
@@ -72,11 +74,10 @@ class Admin_model extends CI_Model
 
     if ($this->upload->do_upload('gambar')) {
       $upload_data = $this->upload->data();
-      $paket['gambar'] = 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/' . $upload_data['file_name']; // Path lokasi gambar
+      $paket['gambar'] = 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/' . $upload_data['file_name'];
 
       return $this->db->insert("paket", $paket);
     } else {
-      // Handle jika upload gagal
       $error = array('error' => $this->upload->display_errors());
       print_r($error);
       return false;
@@ -99,5 +100,24 @@ class Admin_model extends CI_Model
   {
     $this->db->where('IdPaket', $idPaket);
     $this->db->update('paket', $dataPaket);
+  }
+
+  //  ! Pembayaran.php
+  public function getOrder()
+  {
+    $this->db->order_by('ID_Sewa', 'DESC');
+    return $this->db->get('penyewaan')->result();
+  }
+
+  public function terimaPesanan($idSewa)
+  {
+    $this->db->where('ID_Sewa', $idSewa);
+    $this->db->update('penyewaan', ['status' => 'diterima']);
+  }
+
+  public function tolakPesanan($idSewa)
+  {
+    $this->db->where('ID_Sewa', $idSewa);
+    $this->db->update('penyewaan', ['status' => 'ditolak']);
   }
 }

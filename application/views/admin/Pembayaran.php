@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="<?php echo base_url('asset/css/admin.css') ?>" />
     <!-- Font Awesome Cdn Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Link AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   </head>
 
@@ -43,13 +45,9 @@
       <!-- CLOSE-NAV-SIDE-BAR -->
 
       <section class="main">
-        <div class="main-top">
-          <h1>Selamat Datang Admin !</h1>
-          <!-- <i class="fas fa-user-cog"></i> -->
-        </div>
         <section class="main-order">
           <h1>History Pembayaran</h1>
-          <div class="list-order-box">
+          <div class="list-order-box-pesanan">
             <table>
               <tr class="judul">
                 <td colspan="8">
@@ -77,6 +75,7 @@
                   <td><?php echo $row->harga ?></td>
                   <td><?php echo $row->status ?></td>>
                   <td>
+                    <button class="view" id="viewButton" style="display: none;">View</button>
                     <button class="terima" onclick="terimaPesanan(<?php echo $row->ID_Sewa ?>)">Terima</button>
                     <button class="tolak" onclick="tolakPesanan(<?php echo $row->ID_Sewa ?>)">Tolak</button>
                   </td>
@@ -90,12 +89,16 @@
               if (confirm('Anda yakin ingin menerima pesanan ini?')) {
                 window.location.href = '<?php echo base_url('index.php/Admin/terimaPesanan/') ?>' + idSewa;
               }
+
+              $('#terima-' + idSewa).after('<button class="view" id="viewButton' + idSewa + '">Lihat</button>');
             }
 
             function tolakPesanan(idSewa) {
               if (confirm('Anda yakin ingin menolak pesanan ini?')) {
                 window.location.href = '<?php echo base_url('index.php/Admin/tolakPesanan/') ?>' + idSewa;
               }
+
+              $('#tolak-' + idSewa).after('<button class="view" id="viewButton' + idSewa + '">Lihat</button>');
             }
           </script>
 

@@ -50,12 +50,27 @@
                 </div>
                 <div class="main-dashboard">
                     <div class="list-dashboard-box-card">
+                        <div class="box">
+                            <h3>Data Users</h3>
+                            <h1><?php echo $dataUserCount; ?> Users</h1>
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="box">
+                            <h3>Daftar Paket</h3>
+                            <h1><?php echo $dataPaketCount; ?> Paket</h1>
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div class="box">
+                            <h3>Data Penyewaan</h3>
+                            <h1><?php echo $dataPenyewaanCount; ?> Order</h1>
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
                     </div>
                 </div>
 
                 <section class="main-order">
                     <h1>Data User</h1>
-                    <div class="list-order-box">
+                    <div class="list-order-box-user">
                         <table>
                             <tr class="judul">
                                 <th>Nama User</th>

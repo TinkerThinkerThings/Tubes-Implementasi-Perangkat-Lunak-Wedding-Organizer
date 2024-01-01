@@ -11,8 +11,10 @@ class Admin extends CI_Controller
 
   public function index()
   {
-    $data['dataPenyewaan'] = $this->Admin_model->getOrder();
     $data['dataUser'] = $this->Admin_model->getDataUser();
+    $data['dataUserCount'] = $this->Admin_model->countDataUser();
+    $data['dataPenyewaanCount'] = $this->Admin_model->countDataPenyewaan();
+    $data['dataPaketCount'] = $this->Admin_model->countDataPaket();
     $this->load->view('admin/admin', $data);
   }
 
@@ -22,18 +24,6 @@ class Admin extends CI_Controller
       redirect(base_url('index.php/Verifikasidata/login'));
     }
     $this->load->view('admin/Admin.php');
-  }
-
-  public function terimaPesanan($idSewa)
-  {
-    $this->Admin_model->terimaPesanan($idSewa);
-    redirect(base_url('index.php/Admin/index'));
-  }
-
-  public function tolakPesanan($idSewa)
-  {
-    $this->Admin_model->tolakPesanan($idSewa);
-    redirect(base_url('index.php/Admin/index'));
   }
 
   public function Paket()
@@ -48,9 +38,9 @@ class Admin extends CI_Controller
   public function tambah_paket()
   {
     if ($this->input->post()) {
-      $this->load->model('Admin_model'); // Memuat model di sini jika belum dimuat di constructor
+      $this->load->model('Admin_model');
 
-      $config['upload_path'] = './asset/photo'; // Lokasi penyimpanan gambar di server
+      $config['upload_path'] = './asset/photo';
       $config['allowed_types'] = 'gif|jpg|png|jpeg';
       $this->load->library('upload', $config);
 
@@ -59,19 +49,15 @@ class Admin extends CI_Controller
         $paket['gambar'] = 'asset/photo/' . $upload_data['file_name'];
 
         if ($this->Admin_model->tambahPaket($paket)) {
-          // Jika berhasil tambahkan, tampilkan pesan keberhasilan atau redirect ke halaman tertentu
           redirect(base_url('index.php/Admin/Paket'));
         } else {
-          // Handle jika ada masalah saat menambahkan data ke database
           echo "Gagal menambahkan paket.";
         }
       } else {
-        // Handle jika upload gagal
         $error = array('error' => $this->upload->display_errors());
         print_r($error);
       }
     } else {
-      // Jika bukan POST request, tampilkan halaman tambah_paket
       $this->load->view('admin/tambah_paket');
     }
   }
@@ -87,7 +73,6 @@ class Admin extends CI_Controller
     $data['paket'] = $this->Admin_model->getPaketById($idPaket);
 
     if ($this->input->post()) {
-      // Proses update data paket di model
       $this->Admin_model->updatePaket($idPaket, $this->input->post());
       redirect(base_url('index.php/Admin/Paket'));
     } else {
@@ -103,5 +88,17 @@ class Admin extends CI_Controller
     }
     $data['dataPenyewaan'] = $this->Admin_model->getOrder();
     $this->load->view('admin/Pembayaran.php', $data);
+  }
+
+  public function terimaPesanan($idSewa)
+  {
+    $this->Admin_model->terimaPesanan($idSewa);
+    redirect(base_url('index.php/Admin/Pembayaran'));
+  }
+
+  public function tolakPesanan($idSewa)
+  {
+    $this->Admin_model->tolakPesanan($idSewa);
+    redirect(base_url('index.php/Admin/Pembayaran'));
   }
 }

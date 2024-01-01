@@ -62,7 +62,7 @@
             <img src="<?php echo base_url('asset/photo/galery.jpg') ?>" class="img-fluid" style="padding-top: 20px; padding-bottom:20px" alt="...">
         </div>
         <div class="gam">
-            <h1> Our Galerry</h1>
+            <h1> Our Gallery</h1>
 
             <div class="row">
 

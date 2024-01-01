@@ -80,7 +80,7 @@
                 <label for="floatingInputDisabled"></label>
                 <input type="text" class="form-control" id="harga" name="harga" placeholder="Harga" required>
                 <label for="floatingInputDisabled"></label>
-                <select name="Keterangan" id="Keterangan">
+                <select name="keterangan" id="keterangan">
                   <option>Pilih Keterangan Paket</option>
                   <option>Indoor</option>
                   <option>Outdoor</option>
