@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 23, 2023 at 12:51 AM
+-- Generation Time: Jan 01, 2024 at 04:51 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,18 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `wodb`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `ID_Admin` varchar(5) NOT NULL,
-  `Password` varchar(8) NOT NULL,
-  `Nama_Admin` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -53,42 +41,26 @@ CREATE TABLE `paket` (
   `deskripsi` varchar(50) NOT NULL,
   `harga` int(50) NOT NULL,
   `keterangan` enum('indoor','outdoor') NOT NULL,
-  `gambar` varchar(100) NOT NULL,
-  `gambar2` varchar(100) NOT NULL,
-  `gambar3` varchar(100) NOT NULL
+  `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `paket`
 --
 
-INSERT INTO `paket` (`IdPaket`, `nama_kendaraan`, `jumlah_kendaraan`, `tempat`, `jumlah_pengunjung`, `jumlah_mc`, `nama_hiburan`, `nama_dekorasi`, `nama_makeup`, `namapaket`, `deskripsi`, `harga`, `keterangan`, `gambar`, `gambar2`, `gambar3`) VALUES
-(1, 'Limosin', 1, 'Lembang', 500, 2, 'Ustad Adi Hidayat', 'Creative Wedding', 'Wardah', 'Paket 1', 'panjangggggggggggggggggggggggggggggggggggggggggggg', 15000000, 'indoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/paket2.jpg', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/paket1.jpg', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/paket2.jpg'),
-(2, 'Ankot', 1, 'Alun Alun CImahi', 20, 1, 'Badut', 'Decorative Desain', 'Wardah', 'Paket 2', 'panjangggggggggggggggggggggggggggggggggggggggggggg', 500000, 'outdoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/paket1.jpg', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/paket1.jpg', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/paket2.jpg');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pelanggan`
---
-
-CREATE TABLE `pelanggan` (
-  `ID_Pelanggan` varchar(5) NOT NULL,
-  `Nama_Pelanggan` varchar(30) NOT NULL,
-  `Alamat` varchar(30) NOT NULL,
-  `Jenis_Kelamin` varchar(30) NOT NULL,
-  `Email` varchar(30) NOT NULL,
-  `No_telepon` int(14) NOT NULL,
-  `Role` enum('Admin','Pelanggan','Owner') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `pelanggan`
---
-
-INSERT INTO `pelanggan` (`ID_Pelanggan`, `Nama_Pelanggan`, `Alamat`, `Jenis_Kelamin`, `Email`, `No_telepon`, `Role`) VALUES
-('1', 'Acep', 'Sumedang', 'Laki-laki', 'acep@gmail.com', 34454, 'Admin'),
-('2', 'Deri', 'Sumedang', 'Laki-laki', 'acep@gmail.com', 34454, 'Admin');
+INSERT INTO `paket` (`IdPaket`, `nama_kendaraan`, `jumlah_kendaraan`, `tempat`, `jumlah_pengunjung`, `jumlah_mc`, `nama_hiburan`, `nama_dekorasi`, `nama_makeup`, `namapaket`, `deskripsi`, `harga`, `keterangan`, `gambar`) VALUES
+(2, 'Angkot', 1, 'Alun Alun Cimahi', 20, 1, 'Badut', 'Decorative Desain', 'Wardah', 'Paket 2', 'Mengusung Konsep Sederhana dan Cinta Lokal', 500000, 'indoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/paket1.jpg'),
+(3, 'Alphard', 1, 'Cisarua', 1000, 2, 'Kuvaku Band', 'Decorative Desain', 'Marleen Hariman', 'Paket 3', 'Paket Dengan Konsep Budaya Alami Dari Jepang', 200000000, 'indoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/paket1.jpg'),
+(5, 'Alphard', 2, 'Pangandaran', 1000, 2, 'Ustad Adi Hidayat', 'Decorative Desain', 'Marleen Hariman', 'Paket 5', 'Mengusung Konsep Keindahan Alam dan Iman', 65000000, 'outdoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/paket2.jpg'),
+(6, 'Porche', 2, 'Lombok', 2500, 2, 'Raisa dan Rizky Febian', 'Decorative Desain', 'Madame', 'Paket 6', 'Konsep Megah Dan Elegant Dengan Hiburan Menarik', 100000000, 'outdoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/paket2.jpg'),
+(11, 'Hino Dutro', 10, 'CIlacap', 10, 100, 'Barongsai', 'Dekorku', 'Citrasari Makeup', 'Paket 7', 'Paket Mewah Dengan Nuansa Hino Dutro', 750000000, 'indoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/gb8.jpg'),
+(12, 'Optimus Prime', 1, 'Autobots', 5, 0, 'Decepticons', 'Transformer Decoration', 'Bumblebee Makeup', 'Paket 8', 'Mengusung Konsep Autobots vs Decepticons', 2147483647, 'outdoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/gb42.jpg'),
+(13, 'Limosin', 2, 'Las Vegas', 45000, 5, 'Taylor Swift x Bruno Mars', 'Silk Sonic', 'Indonesian Wardrobe', 'Paket 1', 'Paket Signature Mengusung Kemewahan Tak Terhingga', 2147483647, 'indoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/paket2o62.JPG'),
+(14, 'Tank', 1, 'Canbera', 5000, 5, 'Anies', 'CreativeDecoration', 'Wardah', 'Paket 4', 'Mengusung Tema Semi-Politik Indonesia', 2147483647, 'outdoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/gb62.jpg'),
+(15, 'Monster Truck', 7, 'Gelora Bung Karno', 100000, 3, 'Bring Me The Horizon', 'DeadMetal Decoration', 'IaMmEtAL', 'Paket 9', 'Tema Paket Bernuansa Metal Dengan Tamu Metal Keren', 2147483647, 'outdoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/gb712.jpg'),
+(18, 'Kuda', 2, 'Bali', 1000, 1, 'Saxophone', 'Monokrom', 'DeepShine', 'Paket 10', 'Paket Dengan Konsep Internal Yang Siap Untuk Kamu', 67500000, 'outdoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/Untitled6.jpg'),
+(19, 'Kuda', 2, 'Bali', 1000, 1, 'Saxophone', 'Monokrom', 'DeepShine', 'Paket 11', 'Paket Dengan Konsep Intimate Yang Siap Untuk Kamu', 67500000, 'indoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/gb32.jpg'),
+(20, 'Kuda', 2, 'Bali', 1000, 1, 'Saxophone', 'Monokrom', 'DeepShine', 'Paket 12', 'Paket Dengan Konsep Indoor Yang Menarik dan Nyaman', 67500000, 'indoor', 'http://localhost/Tubes-Implementasi-Perangkat-Lunak-Wedding-Organizer/asset/photo/bg2.jpg');
 
 -- --------------------------------------------------------
 
@@ -102,51 +74,19 @@ CREATE TABLE `penyewaan` (
   `Alamat` varchar(30) NOT NULL,
   `Pembayaran` varchar(30) NOT NULL,
   `harga` int(50) NOT NULL,
-  `IdPaket` int(5) NOT NULL
+  `IdPaket` int(5) NOT NULL,
+  `status` enum('diproses','diterima','ditolak') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `penyewaan`
 --
 
-INSERT INTO `penyewaan` (`Nama_Pelanggan`, `ID_Sewa`, `Alamat`, `Pembayaran`, `harga`, `IdPaket`) VALUES
-('Acep', 5, 'fgsdfsdf', 'Tunai', 15000000, 1),
-('Deri', 6, 'Bandung', 'Tunai', 15000000, 1),
-('Deri', 7, 'Bandung', 'Tunai', 15000000, 1),
-('Deri', 8, 'Bandung', 'Tunai', 15000000, 1),
-('Deri', 9, 'Bandung', 'Tunai', 15000000, 1),
-('Deri', 10, 'Bandung', 'Tunai', 15000000, 1),
-('deri', 13, 'bandung', 'Tunai', 15000000, 1),
-('deri', 14, 'bandung', 'Tunai', 15000000, 1),
-('deri', 15, 'bandung', 'Tunai', 15000000, 1),
-('deri', 16, 'bandung', 'Tunai', 15000000, 1),
-('deri', 17, 'bandung', 'Tunai', 15000000, 1),
-('deri', 18, 'bandung', 'Tunai', 15000000, 1),
-('deri', 19, 'bandung', 'Tunai', 15000000, 1),
-('deri', 20, 'bandung', 'Tunai', 15000000, 1),
-('deri', 21, 'bandung', 'Tunai', 15000000, 1),
-('deri', 22, 'cimahi', 'Tunai', 15000000, 1),
-('deri', 23, 'dd', 'Tunai', 15000000, 1),
-('deri', 24, 'bandung', 'Tunai', 15000000, 1),
-('deri', 25, 'bandung', 'Tunai', 500000, 2),
-('deri', 26, 'bandung', 'Tunai', 500000, 2),
-('deri', 27, 'bandung', 'Tunai', 15000000, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `registrasi`
---
-
-CREATE TABLE `registrasi` (
-  `ID_Registrasi` varchar(5) NOT NULL,
-  `ID_Pelanggan` varchar(5) NOT NULL,
-  `Nama_Pelanggan` varchar(30) NOT NULL,
-  `Alamat` varchar(30) NOT NULL,
-  `Jenis_Kelamin` varchar(30) NOT NULL,
-  `Email` varchar(30) NOT NULL,
-  `No_Telepon` int(14) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `penyewaan` (`Nama_Pelanggan`, `ID_Sewa`, `Alamat`, `Pembayaran`, `harga`, `IdPaket`, `status`) VALUES
+('King', 49, 'Jakarta', 'Tunai', 65000000, 5, 'diproses'),
+('Radit', 50, 'Semarang', 'Bank', 750000000, 11, 'diproses'),
+('Liliya', 51, 'Boston', 'E-Wallet', 2147483647, 12, 'diterima'),
+('Amin', 52, 'Subang', 'E-Wallet', 750000000, 11, 'diproses');
 
 -- --------------------------------------------------------
 
@@ -170,25 +110,15 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`Id_User`, `Nama`, `Alamat`, `Password`, `Jenis_Kelamin`, `Email`, `No_Hp`, `Role`) VALUES
-(1, 'Deri', 'Bandung', '12345', 'Laki-Laki', 'meru@gmail.com', '081234567891', 'Pelanggan'),
-(2, 'Asep', 'Cibaduyut', '12345', 'Laki-Laki', 'rara@gmail.com', '081233546781', 'Admin'),
-(3, 'Deri', 'Cidahu', 'ganteng', 'Laki-Laki', 'mana@gmail.com', '081230001124', 'Owner'),
-(4, 'der', 'Cimahi', '$2y$10$ukQSThFAzHxyvdRZx4tB1O3', '', 'asdsc@gmail.com', '081293984743', 'Pelanggan'),
-(5, 'despacito', 'Chj', '$2y$10$pdZKzWsWgt61CYpqG.1KAee', '', 'des@gmail.com', '081293985555', 'Pelanggan'),
-(6, 'rere', 'Flamingo', '$2y$10$UQKjtypdCuS.YtgBBzafuuZ', 'Perempuan', 'rere@gmail.com', '081293984743', 'Pelanggan'),
-(7, 'der', 'cimahi', '$2y$10$VIvlRb5UBNuQ8OagO3Ymbeh', 'Laki-Laki', 'dee@gmail.com', '081293984743', 'Pelanggan'),
-(8, 'derians', 'cimahi', '$2y$10$CqXPtG1wlmjsfo97kGE.C.b', 'Laki-Laki', 'deep@gmail.com', '081293984743', 'Pelanggan'),
-(9, 'desi', 'chj', '222', 'Perempuan', 'desi@gmail.com', '081293984743', 'Pelanggan');
+(1, 'Deri', 'Bandung', 'pw_pelanggan', 'Laki-Laki', 'meru@gmail.com', '081234567891', 'Pelanggan'),
+(2, 'Des', 'Cibaduyut', 'pw_admin', 'Laki-Laki', 'rara@gmail.com', '081233546781', 'Admin'),
+(10, 'Ridwan', 'Bandung', 'hambaallah', 'Laki-Laki', 'des@gmail.com', '088866553322', 'Pelanggan'),
+(11, 'Nana', 'Jakarta', 'nana_pelanggan', 'Perempuan', 'nana@gmail.com', '089577668322', 'Pelanggan'),
+(12, 'Killua', 'Spanyol', 'pw_owner', 'Laki-Laki', 'killua@gmail.com', '088544521638', 'Owner');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`ID_Admin`);
 
 --
 -- Indexes for table `paket`
@@ -197,27 +127,12 @@ ALTER TABLE `paket`
   ADD PRIMARY KEY (`IdPaket`);
 
 --
--- Indexes for table `pelanggan`
---
-ALTER TABLE `pelanggan`
-  ADD PRIMARY KEY (`ID_Pelanggan`),
-  ADD UNIQUE KEY `Nama_Pelanggan` (`Nama_Pelanggan`);
-
---
 -- Indexes for table `penyewaan`
 --
 ALTER TABLE `penyewaan`
   ADD PRIMARY KEY (`ID_Sewa`),
   ADD KEY `Nama_Pelanggan` (`Nama_Pelanggan`),
   ADD KEY `IdPaket` (`IdPaket`);
-
---
--- Indexes for table `registrasi`
---
-ALTER TABLE `registrasi`
-  ADD PRIMARY KEY (`ID_Registrasi`),
-  ADD KEY `Nama_Pelanggan` (`Nama_Pelanggan`),
-  ADD KEY `ID_Pelanggan` (`ID_Pelanggan`);
 
 --
 -- Indexes for table `user`
@@ -230,16 +145,22 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `paket`
+--
+ALTER TABLE `paket`
+  MODIFY `IdPaket` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
 -- AUTO_INCREMENT for table `penyewaan`
 --
 ALTER TABLE `penyewaan`
-  MODIFY `ID_Sewa` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `ID_Sewa` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `Id_User` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `Id_User` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
@@ -249,14 +170,7 @@ ALTER TABLE `user`
 -- Constraints for table `penyewaan`
 --
 ALTER TABLE `penyewaan`
-  ADD CONSTRAINT `penyewaan_ibfk_2` FOREIGN KEY (`Nama_Pelanggan`) REFERENCES `pelanggan` (`Nama_Pelanggan`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `penyewaan_ibfk_3` FOREIGN KEY (`IdPaket`) REFERENCES `paket` (`IdPaket`) ON DELETE CASCADE;
-
---
--- Constraints for table `registrasi`
---
-ALTER TABLE `registrasi`
-  ADD CONSTRAINT `registrasi_ibfk_1` FOREIGN KEY (`ID_Pelanggan`) REFERENCES `pelanggan` (`ID_Pelanggan`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `penyewaan_ibfk_1` FOREIGN KEY (`IdPaket`) REFERENCES `paket` (`IdPaket`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
