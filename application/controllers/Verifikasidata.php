@@ -46,7 +46,7 @@ class Verifikasidata extends CI_Controller
                     redirect(base_url('index.php/Home/index'));
                     break;
                 case 'Owner':
-                    redirect(base_url('index.php/Home/index'));
+                    redirect(base_url('index.php/Owner/index'));
                     break;
                 default:
                     // Redirect to a default page if the role is unknown

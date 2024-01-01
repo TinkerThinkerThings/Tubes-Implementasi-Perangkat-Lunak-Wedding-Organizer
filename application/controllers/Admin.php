@@ -86,6 +86,7 @@ class Admin extends CI_Controller
     if ($this->session->userdata('Role') !== 'Admin' && $this->session->userdata('Role') !== 'Owner' && $this->session->userdata('Role') !== 'Pelanggan') {
       redirect(base_url('index.php/Verifikasidata/login'));
     }
+
     $data['dataPenyewaan'] = $this->Admin_model->getOrder();
     $this->load->view('admin/Pembayaran.php', $data);
   }
@@ -93,7 +94,14 @@ class Admin extends CI_Controller
   public function terimaPesanan($idSewa)
   {
     $this->Admin_model->terimaPesanan($idSewa);
-    redirect(base_url('index.php/Admin/Pembayaran'));
+    redirect(base_url('index.php/admin/lihatPesanan/' . $idSewa));
+  }
+
+  public function lihatPesanan($idSewa)
+  {
+    $data['dataCetakSewa'] = $this->Admin_model->getPenyewaanById($idSewa);
+
+    $this->load->view('admin/view_pesanan.php', $data);
   }
 
   public function tolakPesanan($idSewa)

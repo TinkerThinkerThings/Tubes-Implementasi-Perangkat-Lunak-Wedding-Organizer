@@ -291,6 +291,56 @@ button {
 	font-weight: bold;
 }
 
+/* ! view_pesanan.php */
+.list-order-box-cetak-pesanan {
+	width: 100%;
+	height: 500px;
+	padding: 10px 10px 30px 10px;
+	margin-top: 120px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+}
+.list-order-box-cetak-pesanan .judul {
+	text-align: center;
+}
+.list-order-box-cetak-pesanan table {
+	width: 100%;
+	margin: 50px auto;
+}
+.list-order-box-cetak-pesanan table tr td {
+	padding: 8px;
+	text-align: left;
+	font-size: 18px;
+}
+.list-order-box-cetak-pesanan .print-out {
+	display: block;
+	background-color: gold;
+	height: 40px;
+	width: 40px;
+	margin-left: auto;
+}
+.list-order-box-cetak-pesanan .fas {
+	font-size: 18px;
+	color: #0c0c0c;
+}
+.list-order-box-cetak-pesanan .close {
+	text-decoration: none;
+	text-align: center;
+	width: 280px;
+	height: 20px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #0c0c0c;
+	background-color: #bcbcbc;
+	margin: 0 auto;
+	border-radius: 20px;
+}
+
+.list-order-box-cetak-pesanan .close:hover {
+	font-weight: 900;
+}
+
 /* ! GENERAL */
 label input {
 	margin: 12px 10px;

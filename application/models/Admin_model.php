@@ -120,4 +120,10 @@ class Admin_model extends CI_Model
     $this->db->where('ID_Sewa', $idSewa);
     $this->db->update('penyewaan', ['status' => 'ditolak']);
   }
+
+  public function getPenyewaanById($idSewa)
+  {
+    $this->db->where('ID_Sewa', $idSewa);
+    return $this->db->get('penyewaan')->row_array();
+  }
 }

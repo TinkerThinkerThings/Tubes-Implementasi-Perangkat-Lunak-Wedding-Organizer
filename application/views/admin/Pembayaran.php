@@ -75,7 +75,6 @@
                   <td><?php echo $row->harga ?></td>
                   <td><?php echo $row->status ?></td>>
                   <td>
-                    <button class="view" id="viewButton" style="display: none;">View</button>
                     <button class="terima" onclick="terimaPesanan(<?php echo $row->ID_Sewa ?>)">Terima</button>
                     <button class="tolak" onclick="tolakPesanan(<?php echo $row->ID_Sewa ?>)">Tolak</button>
                   </td>
@@ -89,16 +88,12 @@
               if (confirm('Anda yakin ingin menerima pesanan ini?')) {
                 window.location.href = '<?php echo base_url('index.php/Admin/terimaPesanan/') ?>' + idSewa;
               }
-
-              $('#terima-' + idSewa).after('<button class="view" id="viewButton' + idSewa + '">Lihat</button>');
             }
 
             function tolakPesanan(idSewa) {
               if (confirm('Anda yakin ingin menolak pesanan ini?')) {
                 window.location.href = '<?php echo base_url('index.php/Admin/tolakPesanan/') ?>' + idSewa;
               }
-
-              $('#tolak-' + idSewa).after('<button class="view" id="viewButton' + idSewa + '">Lihat</button>');
             }
           </script>
 
